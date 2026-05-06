@@ -1,10 +1,10 @@
 ---
 name: market-research
-version: 1.1.0
+version: 1.2.0
 description: |
-  T0 Market Research skill. 2 modes: Express (AI search, 60%) and Pro (Deep Research, 80%).
+  T0 Market Research skill. 3 modes: Express (AI search), Pro (Deep Research), Valyu (API search).
+  Valyu provides real-time web + proprietary content (papers, filings, patents).
   Mega Prompt template for Google Deep Research. Data saturation check.
-  For vibe coders, startup founders, freelancers, agencies.
 triggers:
   - "research thị trường"
   - "market research"
@@ -12,12 +12,13 @@ triggers:
   - "deep research"
   - "market size"
   - "competitor"
+  - "valyu"
 ---
 
 # Market Research — T0
 
 ## Goal
-Thu thập data thị trường cho product. 2 modes: Express (nhanh) và Pro (Deep Research).
+Thu thập data thị trường cho product. 3 modes: Express, Pro, Valyu.
 
 ## Target Audiences
 - **Vibe coders** — Developers using AI coding tools (Claude Code, Cursor, Copilot)
@@ -56,6 +57,49 @@ Prompt: "research thị trường [ngành] cho [project]"
 **Output:** `data/t0_market_research.md`
 **Confidence:** 📊 80%
 **PMF Penalty:** -1.0
+
+---
+
+## MODE 3: VALYU (API Search) ⭐ NEW
+
+**Khi nào dùng:** Muốn data chất lượng cao, nhanh, có proprietary content.
+
+### Setup:
+```bash
+pip install valyu
+export VALYU_API_KEY=your_key  # Get from https://valyu.ai
+```
+
+### Usage:
+```bash
+# Web search (fast, broad)
+python scripts/valyu_search.py "Vietnam SaaS market size 2025" --mode web
+
+# Deep search (full content extraction)
+python scripts/valyu_search.py "product-market fit framework" --mode deep
+
+# Academic search (papers, filings, patents)
+python scripts/valyu_search.py "startup validation methodology" --mode academic
+```
+
+### In Claude Code:
+```
+"valyu search Vietnam SaaS market"
+"deep search product-market fit"
+"academic search startup validation"
+```
+
+**Output:** `data/t0_market_research.md` + `data/search_*.md`
+**Confidence:** 📊 75-80%
+**PMF Penalty:** -1.0
+
+### Valyu Modes:
+
+| Mode | Use Case | Content | Speed |
+|------|----------|---------|-------|
+| `web` | General market data | Web pages, news | Fast |
+| `deep` | Full content extraction | Complete articles | Medium |
+| `academic` | Research papers | Papers, filings, patents | Slow |
 
 ---
 
@@ -99,4 +143,20 @@ Sau mỗi iteration, check 5 signals:
 
 ## Timing Catalyst
 - Why now?
+
+## Sources
+- [Source 1](url) — type: web/deep/academic
+- [Source 2](url) — type: web/deep/academic
 ```
+
+---
+
+## MODE COMPARISON
+
+| Mode | Confidence | Speed | Cost | Best For |
+|------|------------|-------|------|----------|
+| Express | 🤖 60% | Fast | Free | Quick validation |
+| Pro | 📊 80% | Slow | Free | Deep research |
+| Valyu | 📊 75-80% | Fast | $$ | Production research |
+
+**Recommendation:** Start with Express, upgrade to Valyu for production.

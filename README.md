@@ -59,6 +59,31 @@ product-tower init
 
 ---
 
+## Optional: Valyu Search API
+
+For enhanced market research with real-time web + proprietary content:
+
+```bash
+# Install Valyu
+pip install valyu
+
+# Set API key (get from https://valyu.ai)
+export VALYU_API_KEY=your_key
+
+# Use in Claude Code
+"valyu search Vietnam SaaS market"
+"deep search product-market fit"
+"academic search startup validation"
+```
+
+| Mode | Use Case | Content |
+|------|----------|---------|
+| `web` | General market data | Web pages, news |
+| `deep` | Full content extraction | Complete articles |
+| `academic` | Research papers | Papers, filings, patents |
+
+---
+
 ## The Tower
 
 ```

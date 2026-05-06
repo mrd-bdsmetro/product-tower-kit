@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.0] - 2026-05-06
+
+### Added
+- **Valyu Search Integration** — Enhanced market research with real-time web + proprietary content
+- `scripts/valyu_search.py` — Python CLI for Valyu API (web, deep, academic modes)
+- Updated `market-research` skill with Valyu mode (v1.2.0)
+- README updated with Valyu setup instructions
+
+### Valyu Modes
+- `web` — General market data (fast)
+- `deep` — Full content extraction (medium)
+- `academic` — Research papers, filings, patents (slow)
+
 ## [1.2.0] - 2026-05-06
 
 ### Added (from claudekit-engineer)
