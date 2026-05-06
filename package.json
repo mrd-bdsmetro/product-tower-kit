@@ -1,0 +1,49 @@
+{
+  "name": "product-tower-kit",
+  "version": "1.0.0",
+  "description": "Product management toolkit for Claude Code — validate ideas, score PMF, scope MVPs. Vietnamese-first, ADHD-friendly.",
+  "main": "index.js",
+  "bin": {
+    "product-tower": "./bin/product-tower.js"
+  },
+  "scripts": {
+    "test": "echo \"No tests yet\"",
+    "lint": "echo \"No linter\"",
+    "init": "node bin/product-tower.js init"
+  },
+  "files": [
+    ".claude/",
+    "bin/",
+    "scripts/",
+    "templates/",
+    "resources/",
+    "docs/",
+    "index.js",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "product-management",
+    "pmf-validation",
+    "claude-code",
+    "startup",
+    "lean-startup",
+    "market-research",
+    "vietnamese",
+    "solo-founder",
+    "indie-hacker"
+  ],
+  "author": "MR.D",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AIScale-Corp/product-tower-kit.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
