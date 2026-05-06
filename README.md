@@ -24,8 +24,8 @@ A complete product management system for AI coding tools (Claude Code, Cursor, G
 - **14-Tier Framework** — From market research to post-launch feedback
 - **Anti-Bias Enforcement** — AB1-AB6 mandatory layer before PMF validation
 - **PMF Gate System** — Code-enforced threshold (≥30/50) to proceed
-- **5 Specialized Agents** — Planner, researcher, challenger, validator, scoper
-- **12 Skills** — Complete PM toolkit with Claude Code integration
+- **7 Specialized Agents** — Planner, researcher, challenger, validator, scoper, brainstormer, researcher
+- **17 Skills** — Complete PM toolkit with Claude Code integration + Valyu search
 - **Confidence Tagging** — Every data point scored (60%-95%)
 - **ADHD-Friendly** — One tier at a time, clear next actions
 - **Multi-Project** — Reusable for every project you build

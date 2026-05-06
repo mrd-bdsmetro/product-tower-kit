@@ -2,9 +2,9 @@
 
 ## Overview
 
-**Total: 1,744 lines | 15 files | 3 languages**
+**Total: 4,200 lines | 42 files | 8 directories | 4 languages**
 
-Product Tower Kit is a product management toolkit for Claude Code. The codebase spans Python (business logic), PowerShell (orchestration), and Node.js (CLI wrapper + CI contracts).
+Product Tower Kit is a product management toolkit for Claude Code. The codebase spans Python (business logic + Valyu search), PowerShell (orchestration), Node.js (CLI wrapper + CI contracts), and Markdown (docs, skills, agents, templates).
 
 ---
 
@@ -13,32 +13,40 @@ Product Tower Kit is a product management toolkit for Claude Code. The codebase 
 ```
 product-tower-kit/
 ├── .claude/                    # Claude Code integration
-│   ├── agents/                 # 5 agent definitions
+│   ├── agents/                 # 7 agent definitions
 │   ├── commands/               # 7 slash commands
 │   ├── hooks/                  # 3 automation hooks
 │   ├── rules/                  # 3 policy rules
 │   ├── settings.json           # Hook configuration
-│   └── skills/                 # 12 SKILL.md files
+│   └── skills/                 # 17 SKILL.md files
 ├── bin/                        # CLI entry point
-│   └── product-tower.js        # 97 lines
-├── docs/                       # Documentation
+│   └── product-tower.js        # 82 lines
+├── data/                       # Product Tower output (19 files)
+│   ├── t*.md                   # Tower tier outputs (T-1, T0, T0-CP, T1-T6, T7-T9, T9.5)
+│   └── ab*.md                  # Anti-bias outputs (AB1-AB6)
+├── docs/                       # Documentation (5 files)
 │   ├── examples/               # Example projects
-│   └── quickstart.md           # 136 lines
+│   └── quickstart.md
+├── public/                     # llms.txt files
+│   ├── llms.txt
+│   └── llms-full.txt
 ├── resources/                  # Reference materials
-│   └── ecosystem-map.md        # 64 lines
-├── scripts/                    # Core scripts
-│   ├── gate_checker.py         # 277 lines — Gate enforcement
-│   ├── harness-eval.ps1        # 122 lines — Harness evaluator
-│   ├── harness-health.ps1      # 315 lines — Health check
-│   ├── invariant-checks.js     # 211 lines — Invariant checks
-│   └── syntax-check.js         # 95 lines — Syntax validation
+│   └── ecosystem-map.md
+├── scripts/                    # Core scripts (6 files)
+│   ├── gate_checker.py         # 247 lines — Gate enforcement
+│   ├── valyu_search.py         # 159 lines — Valyu API integration
+│   ├── harness-health.ps1      # 259 lines — Health check
+│   ├── harness-eval.ps1        # 103 lines — Harness evaluator
+│   ├── invariant-checks.js     # 178 lines — Invariant checks
+│   └── syntax-check.js         # 78 lines — Syntax validation
 ├── templates/                  # Output templates
-│   └── product-plan.md         # 124 lines
+│   └── product-plan.md         # 92 lines
 ├── index.js                    # 31 lines — Module exports
-├── package.json                # 54 lines
-├── README.md                   # 130 lines
-├── CHANGELOG.md                # 18 lines
+├── package.json                # 56 lines
+├── README.md                   # 171 lines
+├── CHANGELOG.md                # 67 lines
 ├── LICENSE                     # 24 lines
+├── pipeline_state.json         # State file
 └── .gitignore                  # 46 lines
 ```
 
@@ -48,13 +56,15 @@ product-tower-kit/
 
 | Directory | Lines | Files | Purpose |
 |-----------|------:|------:|---------|
-| Root | 303 | 6 | Config, exports, docs |
-| bin | 97 | 1 | CLI entry point |
-| docs | 136 | 1 | User documentation |
-| resources | 64 | 1 | Reference materials |
-| scripts | 1,020 | 5 | Core logic |
-| templates | 124 | 1 | Output templates |
-| **Total** | **1,744** | **15** | |
+| Root | 408 | 7 | Config, exports, docs |
+| bin | 82 | 1 | CLI entry point |
+| data | 1,232 | 19 | Product Tower output (T0-T9.5, AB1-AB6) |
+| docs | 1,116 | 5 | Documentation |
+| public | 184 | 2 | llms.txt files |
+| resources | 62 | 1 | Ecosystem map |
+| scripts | 1,024 | 6 | Gate checker, Valyu, harness |
+| templates | 92 | 1 | Product plan template |
+| **Total** | **4,200** | **42** | |
 
 ---
 
@@ -62,11 +72,11 @@ product-tower-kit/
 
 | Language | Lines | Files | Purpose |
 |----------|------:|------:|---------|
-| Python | 277 | 1 | Business logic (gate_checker.py) |
-| PowerShell | 437 | 2 | Orchestration (harness-health.ps1, harness-eval.ps1) |
-| Node.js | 337 | 3 | CLI + CI (bin/product-tower.js, invariant-checks.js, syntax-check.js) |
-| Markdown | 693 | 8 | Docs, templates, config |
-| **Total** | **1,744** | **15** | |
+| Python | 406 | 2 | Business logic (gate_checker.py) + Valyu search (valyu_search.py) |
+| PowerShell | 362 | 2 | Orchestration (harness-health.ps1, harness-eval.ps1) |
+| Node.js | 369 | 4 | CLI + CI (bin/product-tower.js, invariant-checks.js, syntax-check.js, index.js) |
+| Markdown | 3,063 | 34 | Docs, skills, agents, commands, templates, data output |
+| **Total** | **4,200** | **42** | |
 
 ---
 
@@ -76,25 +86,26 @@ product-tower-kit/
 
 | File | Lines | Language | Purpose |
 |------|------:|----------|---------|
-| `scripts/gate_checker.py` | 277 | Python | Gate enforcement, PMF scoring, state management |
-| `scripts/harness-health.ps1` | 315 | PowerShell | Health check (70+ checks across all components) |
-| `scripts/harness-eval.ps1` | 122 | PowerShell | Harness evaluator (runs health + syntax + gate) |
-| `scripts/invariant-checks.js` | 211 | Node.js | Invariant checks (package, skills, agents, commands) |
-| `scripts/syntax-check.js` | 95 | Node.js | Syntax validation (Node.js, Python, JSON, SKILL.md) |
+| `scripts/gate_checker.py` | 247 | Python | Gate enforcement, PMF scoring, state management |
+| `scripts/valyu_search.py` | 159 | Python | Valyu API integration (web, deep, academic search) |
+| `scripts/harness-health.ps1` | 259 | PowerShell | Health check (70+ checks across all components) |
+| `scripts/harness-eval.ps1` | 103 | PowerShell | Harness evaluator (runs health + syntax + gate) |
+| `scripts/invariant-checks.js` | 178 | Node.js | Invariant checks (package, skills, agents, commands) |
+| `scripts/syntax-check.js` | 78 | Node.js | Syntax validation (Node.js, Python, JSON, SKILL.md) |
 
 ### CLI
 
 | File | Lines | Language | Purpose |
 |------|------:|----------|---------|
-| `bin/product-tower.js` | 97 | Node.js | CLI entry point (init, check, complete, pmf, status, assess, naming) |
+| `bin/product-tower.js` | 82 | Node.js | CLI entry point (init, check, complete, pmf, status, assess, naming) |
 | `index.js` | 31 | Node.js | Module exports (KIT_ROOT, SKILLS_DIR, SCRIPTS_DIR) |
 
 ### Claude Code Integration
 
 | Directory | Files | Purpose |
 |-----------|------:|---------|
-| `.claude/skills/` | 12 | SKILL.md files (knowledge layer) |
-| `.claude/agents/` | 5 | Agent definitions (execution layer) |
+| `.claude/skills/` | 17 | SKILL.md files (knowledge layer) |
+| `.claude/agents/` | 7 | Agent definitions (execution layer) |
 | `.claude/commands/` | 7 | Slash commands (UX layer) |
 | `.claude/hooks/` | 3 | Automation hooks (enforcement layer) |
 | `.claude/rules/` | 3 | Policy rules (policy layer) |
@@ -125,12 +136,12 @@ product-tower-kit/
 
 | System | Layer | Files | Purpose |
 |--------|-------|------:|---------|
-| **Skills** | Knowledge | 12 | SKILL.md files for Claude Code |
-| **Agents** | Execution | 5 | Agent definitions |
+| **Skills** | Knowledge | 17 | SKILL.md files for Claude Code |
+| **Agents** | Execution | 7 | Agent definitions |
 | **Commands** | UX | 7 | Slash commands |
 | **Hooks** | Enforcement | 3 | Automation hooks |
 | **Rules** | Policy | 3 | Policy rules |
-| **Harness** | Quality | 4 | Quality assurance scripts |
+| **Harness** | Quality | 5 | Quality assurance scripts (includes Valyu) |
 
 ---
 
@@ -141,9 +152,10 @@ product-tower-kit/
 | Dependency | Version | Required | Purpose |
 |------------|---------|----------|---------|
 | Node.js | ≥ 18.0.0 | Yes | CLI wrapper, syntax checks |
-| Python 3 | Any | Yes | Gate enforcement, PMF scoring |
+| Python 3 | Any | Yes | Gate enforcement, PMF scoring, Valyu search |
 | PowerShell | Any | No | Harness health checks (Windows) |
 | Claude Code | Latest | Yes | Skills, agents, commands |
+| Valyu | Latest | No | Enhanced market research (web, deep, academic) |
 
 ### npm Dependencies
 
@@ -169,8 +181,8 @@ Layer 1: Syntax Check (node scripts/syntax-check.js)
 Layer 2: Invariant Checks (node scripts/invariant-checks.js)
   ├── Package structure (name, bin, files, license)
   ├── CLI commands (shebang, command mapping)
-  ├── Skills (12 SKILL.md files, frontmatter)
-  ├── Agents (5 agents, Role/Behavior/Activation sections)
+  ├── Skills (17 SKILL.md files, frontmatter)
+  ├── Agents (7 agents, Role/Behavior/Activation sections)
   ├── Commands (7 commands, Usage section)
   ├── Hooks (3 hooks, settings.json)
   ├── Rules (3 rules)
@@ -180,12 +192,12 @@ Layer 2: Invariant Checks (node scripts/invariant-checks.js)
 Layer 3: Harness Health (powershell scripts/harness-health.ps1)
   ├── Package files (6 files)
   ├── CLI entry point (shebang)
-  ├── Skills (12 SKILL.md files, frontmatter, Goal section)
-  ├── Agents (5 agents, Role/Behavior sections)
+  ├── Skills (17 SKILL.md files, frontmatter, Goal section)
+  ├── Agents (7 agents, Role/Behavior sections)
   ├── Commands (7 commands, Usage section)
   ├── Hooks (3 hooks, settings.json)
   ├── Rules (3 rules)
-  ├── Scripts (gate_checker.py, Python available)
+  ├── Scripts (gate_checker.py, valyu_search.py, Python available)
   ├── Templates (product-plan.md)
   ├── Resources (ecosystem-map.md)
   ├── Docs (quickstart.md)

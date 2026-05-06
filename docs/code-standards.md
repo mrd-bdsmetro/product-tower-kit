@@ -31,7 +31,7 @@ product-tower-kit/
 | Commands | `pt-kebab-case.md` | `pt-init.md` |
 | Hooks | `kebab-case.sh` | `gate-check.sh` |
 | Rules | `kebab-case.md` | `gate-enforcement.md` |
-| Python scripts | `snake_case.py` | `gate_checker.py` |
+| Python scripts | `snake_case.py` | `gate_checker.py`, `valyu_search.py` |
 | PowerShell scripts | `kebab-case.ps1` | `harness-health.ps1` |
 | Node.js scripts | `kebab-case.js` | `syntax-check.js` |
 | Tower output | `t{N}_{snake_case}.md` | `t0_market_research.md` |

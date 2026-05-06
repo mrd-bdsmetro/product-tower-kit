@@ -22,14 +22,15 @@
 │  → user-discovery → pmf-validator → pricing-strategy            │
 │  → competitor-analysis → deep-research-parser                   │
 │  → analytics-feedback → delivery-tower → sales-tower            │
-│  → product-sale                                                  │
+│  → product-sale → brainstorm → research → problem-solving       │
+│  → retro → sequential-thinking                                  │
 └───────────────────────────┬─────────────────────────────────────┘
                             │
                             ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                   EXECUTION LAYER (Agents)                       │
 │  product-planner  market-researcher  anti-bias-challenger       │
-│  pmf-validator  feature-scoper                                  │
+│  pmf-validator  feature-scoper  brainstormer  researcher        │
 └───────────────────────────┬─────────────────────────────────────┘
                             │
                             ▼
@@ -62,9 +63,11 @@
 
 ## 3-Language Stack
 
-### Python — Business Logic
+### Python — Business Logic + Valyu Search
 
-**File:** `scripts/gate_checker.py` (277 lines)
+**Files:**
+- `scripts/gate_checker.py` (247 lines) — Gate enforcement
+- `scripts/valyu_search.py` (159 lines) — Valyu API integration
 
 **Responsibilities:**
 - Gate enforcement (19-tier DAG)
@@ -72,6 +75,7 @@
 - State management (pipeline_state.json)
 - File naming conventions
 - Health assessment
+- Valyu search integration (web, deep, academic modes)
 
 **Key Components:**
 ```python
@@ -99,8 +103,8 @@ cmd_naming()    # Show naming convention
 ### PowerShell — Orchestration
 
 **Files:**
-- `scripts/harness-health.ps1` (315 lines) — Health check
-- `scripts/harness-eval.ps1` (122 lines) — Harness evaluator
+- `scripts/harness-health.ps1` (259 lines) — Health check
+- `scripts/harness-eval.ps1` (103 lines) — Harness evaluator
 
 **Responsibilities:**
 - Health checks (70+ checks across all components)
@@ -126,9 +130,9 @@ function Run-Check {
 ### Node.js — CLI Wrapper + CI Contracts
 
 **Files:**
-- `bin/product-tower.js` (97 lines) — CLI entry point
-- `scripts/invariant-checks.js` (211 lines) — Invariant checks
-- `scripts/syntax-check.js` (95 lines) — Syntax validation
+- `bin/product-tower.js` (82 lines) — CLI entry point
+- `scripts/invariant-checks.js` (178 lines) — Invariant checks
+- `scripts/syntax-check.js` (78 lines) — Syntax validation
 - `index.js` (31 lines) — Module exports
 
 **Responsibilities:**
@@ -161,12 +165,12 @@ function assert(condition, message) {
 
 ### 1. Skills System (Knowledge Layer)
 
-**12 SKILL.md files** in `.claude/skills/`
+**17 SKILL.md files** in `.claude/skills/`
 
 | Skill | Tiers | Purpose |
 |-------|-------|---------|
 | product-tower | ALL | Master orchestrator |
-| market-research | T0 | Data collection |
+| market-research | T0 | Data collection (Express/Pro/Valyu modes) |
 | market-segmentation | T1-T3 | Segment targeting |
 | user-discovery | T4-T6 | Persona + needs |
 | pmf-validator | T7 | PMF gate |
@@ -177,10 +181,15 @@ function assert(condition, message) {
 | delivery-tower | D1-D6 | GTM + launch |
 | sales-tower | S0-S9 | Hormozi framework |
 | product-sale | P0-P10 | Unified BUILD+SELL |
+| brainstorm | — | Trade-off analysis, anti-rationalization |
+| research | — | Systematic research with confidence scoring |
+| problem-solving | — | 5 Whys, 80/20, Inversion |
+| retro | — | Sprint retrospectives for T14 |
+| sequential-thinking | — | Structured problem-solving |
 
 ### 2. Agents System (Execution Layer)
 
-**5 agents** in `.claude/agents/`
+**7 agents** in `.claude/agents/`
 
 | Agent | Role | Trigger |
 |-------|------|---------|
@@ -189,6 +198,8 @@ function assert(condition, message) {
 | anti-bias-challenger | AB1-AB6 enforcement | "challenge", "red team" |
 | pmf-validator | PMF scoring | "validate PMF" |
 | feature-scoper | Feature scoping | "scope features", "MVP" |
+| brainstormer | CTO-level advisor | "brainstorm", "trade-off" |
+| researcher | Technical analyst | "deep research", "analyze" |
 
 ### 3. Commands System (UX Layer)
 
@@ -228,14 +239,15 @@ function assert(condition, message) {
 
 ### 6. Harness System (Quality Assurance)
 
-**4 scripts** in `scripts/`
+**5 scripts** in `scripts/`
 
 | Script | Language | Lines | Purpose |
 |--------|----------|------:|---------|
-| syntax-check.js | Node.js | 95 | Syntax validation |
-| invariant-checks.js | Node.js | 211 | Invariant checks |
-| harness-eval.ps1 | PowerShell | 122 | Harness evaluator |
-| harness-health.ps1 | PowerShell | 315 | Health check |
+| syntax-check.js | Node.js | 78 | Syntax validation |
+| invariant-checks.js | Node.js | 178 | Invariant checks |
+| harness-eval.ps1 | PowerShell | 103 | Harness evaluator |
+| harness-health.ps1 | PowerShell | 259 | Health check |
+| valyu_search.py | Python | 159 | Valyu API integration |
 
 **3 Levels:**
 1. **Health** — File existence, structure, frontmatter
@@ -400,8 +412,66 @@ Next Tier or Block
 ### Python
 
 - **Gate Checker:** `scripts/gate_checker.py` — Gate enforcement
+- **Valyu Search:** `scripts/valyu_search.py` — Market research via Valyu API
 - **Called by:** Node.js CLI via `child_process.execSync()`
 - **State:** `pipeline_state.json` — Project state
+
+---
+
+## Valyu Integration Layer
+
+### Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    VALYU SEARCH INTEGRATION                      │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  market-research skill                                           │
+│       │                                                          │
+│       ▼                                                          │
+│  valyu_search.py (Python CLI)                                    │
+│       │                                                          │
+│       ├── web mode      → General market data (fast)             │
+│       ├── deep mode     → Full content extraction (medium)       │
+│       └── academic mode → Papers, filings, patents (slow)        │
+│       │                                                          │
+│       ▼                                                          │
+│  Valyu API (https://valyu.ai)                                    │
+│       │                                                          │
+│       ▼                                                          │
+│  data/search_{mode}_{timestamp}.md                               │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Usage
+
+```bash
+# Direct CLI usage
+python scripts/valyu_search.py "Vietnam SaaS market" --mode deep
+python scripts/valyu_search.py "PMF framework" --mode academic --max-results 5
+
+# Via Claude Code
+"valyu search Vietnam SaaS market"
+"deep search product-market fit"
+"academic search startup validation"
+```
+
+### Search Modes
+
+| Mode | Use Case | Speed | Content |
+|------|----------|-------|---------|
+| `web` | General market data | Fast | Web pages, news |
+| `deep` | Full content extraction | Medium | Complete articles |
+| `academic` | Research papers | Slow | Papers, filings, patents |
+
+### Dependencies
+
+| Dependency | Required | Purpose |
+|------------|----------|---------|
+| `valyu` (pip) | Yes | Python SDK for Valyu API |
+| `VALYU_API_KEY` | Yes | API authentication |
 
 ---
 

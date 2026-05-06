@@ -23,12 +23,12 @@ product-tower (WHAT to build + WHY)
 
 ---
 
-## Skills (12 total)
+## Skills (17 total)
 
 | # | Skill | Tiers | Purpose |
 |---|-------|-------|---------|
 | 1 | product-tower | ALL | Master orchestrator |
-| 2 | market-research | T0 | Data collection |
+| 2 | market-research | T0 | Data collection (Express/Pro/Valyu modes) |
 | 3 | market-segmentation | T1-T3 | Segment targeting |
 | 4 | user-discovery | T4-T6 | Persona + needs |
 | 5 | pmf-validator | T7 | PMF gate |
@@ -39,10 +39,15 @@ product-tower (WHAT to build + WHY)
 | 10 | delivery-tower | D1-D6 | GTM + launch |
 | 11 | sales-tower | S0-S9 | Hormozi framework |
 | 12 | product-sale | P0-P10 | Unified BUILD+SELL |
+| 13 | brainstorm | — | Trade-off analysis, anti-rationalization |
+| 14 | research | — | Systematic research with confidence scoring |
+| 15 | problem-solving | — | 5 Whys, 80/20, Inversion |
+| 16 | retro | — | Sprint retrospectives for T14 |
+| 17 | sequential-thinking | — | Structured problem-solving |
 
 ---
 
-## Agents (5 total)
+## Agents (7 total)
 
 | Agent | Role | Trigger |
 |-------|------|---------|
@@ -51,6 +56,8 @@ product-tower (WHAT to build + WHY)
 | anti-bias-challenger | AB1-AB6 enforcement | "challenge", "red team" |
 | pmf-validator | PMF scoring | "validate PMF" |
 | feature-scoper | Feature scoping | "scope features", "MVP" |
+| brainstormer | CTO-level advisor | "brainstorm", "trade-off" |
+| researcher | Technical analyst | "deep research", "analyze" |
 
 ---
 
@@ -73,3 +80,8 @@ product-tower (WHAT to build + WHY)
 | T8-T9 | — | feature-scoper |
 | T9.5 | pricing-strategy | feature-scoper |
 | T14 | analytics-feedback | — |
+| — | brainstorm | brainstormer |
+| — | research | researcher |
+| — | problem-solving | — |
+| — | retro | — |
+| — | sequential-thinking | — |

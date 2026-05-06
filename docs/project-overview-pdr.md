@@ -5,7 +5,7 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Product Tower Kit |
-| **Version** | 1.0.0 |
+| **Version** | 1.3.0 |
 | **Author** | MR.D |
 | **License** | Proprietary |
 | **Repository** | [github.com/AIScale-Corp/product-tower-kit](https://github.com/AIScale-Corp/product-tower-kit) |
@@ -15,7 +15,7 @@
 
 ## Description
 
-Product Tower Kit is a product management toolkit for vibe coders and startup founders. It provides a 14-tier framework (T0→T14) with anti-bias enforcement (AB1→AB6), a PMF gate system (≥30/50), 5 specialized agents, 12 skills, 7 commands, and 3 hooks.
+Product Tower Kit is a product management toolkit for vibe coders and startup founders. It provides a 14-tier framework (T0→T14) with anti-bias enforcement (AB1→AB6), a PMF gate system (≥30/50), 7 specialized agents, 17 skills, 7 commands, and 3 hooks. Includes Valyu search integration for enhanced market research.
 
 **For:** Vibe coders, startup founders, freelancers, agencies, Vietnamese founders, ADHD founders.
 
@@ -104,13 +104,13 @@ T0: Market Research 🔍        ← DATA
 
 | Metric | Target (6 months) | Target (12 months) |
 |--------|-------------------|---------------------|
-| **npm Downloads** | 500/month | 2,000/month |
-| **GitHub Stars** | 200 | 1,000 |
-| **Revenue** | $2,000 MRR | $10,000 MRR |
-| **Active Projects** | 100 | 500 |
+| **npm Downloads** | 1,000/month | 5,000/month |
+| **GitHub Stars** | 500 | 2,500 |
+| **Revenue** | $5,000 MRR | $25,000 MRR |
+| **Active Projects** | 250 | 1,250 |
 | **PMF Pass Rate** | 60% | 70% |
-| **Free Users** | 1,000 | 5,000 |
-| **Paid Users** | 100 | 500 |
+| **Free Users** | 2,500 | 12,500 |
+| **Paid Users** | 250 | 1,250 |
 
 ---
 
@@ -132,8 +132,9 @@ T0: Market Research 🔍        ← DATA
 | Phase | Date | Milestone |
 |-------|------|-----------|
 | **v1.0 Launch** | May 2026 | Initial release with 14-tier framework |
-| **v1.1** | June 2026 | Vietnamese documentation, community feedback |
-| **v1.2** | July 2026 | Advanced templates, team features |
+| **v1.1** | May 2026 | Broader market positioning (vibe coders, startups, freelancers, agencies) |
+| **v1.2** | May 2026 | brainstorm, research, problem-solving, retro, sequential-thinking skills + brainstormer agent |
+| **v1.3** | May 2026 | Valyu search integration |
 | **v2.0** | Sep 2026 | Multi-language support, integrations |
 
 ---
@@ -144,7 +145,7 @@ T0: Market Research 🔍        ← DATA
 |------------|--------|
 | **Runtime** | Node.js ≥ 18.0.0 |
 | **Dependencies** | Zero npm dependencies |
-| **Python** | Required for gate_checker.py |
+| **Python** | Required for gate_checker.py, valyu_search.py |
 | **Platform** | Cross-platform (Windows, macOS, Linux) |
 | **Claude Code** | Required for skills, agents, commands |
 
@@ -155,9 +156,10 @@ T0: Market Research 🔍        ← DATA
 | Dependency | Type | Purpose |
 |------------|------|---------|
 | Node.js | Runtime | CLI wrapper, syntax checks |
-| Python 3 | Runtime | Gate enforcement, PMF scoring |
+| Python 3 | Runtime | Gate enforcement, PMF scoring, Valyu search |
 | PowerShell | Runtime | Harness health checks (optional) |
 | Claude Code | Platform | Skills, agents, commands execution |
+| Valyu | Optional | Enhanced market research (web, deep, academic) |
 
 ---
 
