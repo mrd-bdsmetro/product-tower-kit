@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0] - 2026-05-06
+
+### Added (from claudekit-marketing)
+- **launch-strategy skill** — ORB Framework, 5-phase launch, Product Hunt strategy
+- **marketing-ideas skill** — 140+ proven marketing ideas (Content, PLG, Social, Email, Partnerships, PR)
+- **marketing-psychology skill** — 70+ mental models (persuasion, pricing, UX, growth)
+- **competitor-alternatives skill** — Comparison page templates for SEO and sales
+- **free-tool-strategy skill** — Engineering-as-marketing for lead generation
+- **onboarding-cro skill** — User onboarding and activation optimization
+
+### Skills count: 17 → 23
+
 ## [1.3.0] - 2026-05-06
 
 ### Added
