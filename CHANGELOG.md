@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.2.0] - 2026-05-06
+
+### Added (from claudekit-engineer)
+- **brainstorm skill** — Product brainstorming with trade-off analysis and anti-rationalization
+- **research skill** — Market research methodology with confidence scoring
+- **problem-solving skill** — Systematic approaches for PMF pivot and stuck situations
+- **retro skill** — Sprint retrospectives for T14 feedback loop
+- **sequential-thinking skill** — Structured problem-solving for complex product decisions
+- **brainstormer agent** — CTO-level advisor for product decisions
+- **researcher agent** (enhanced) — Technical analyst with saturation check
+
+### Patterns adopted from claudekit
+- Anti-Rationalization table (from brainstorm)
+- Quick Dispatch table (from problem-solving)
+- Confidence scoring system (from research)
+- Saturation check (from research)
+- 5 Whys, 80/20 Rule, Inversion Exercise (from problem-solving)
+
 ## [1.1.0] - 2026-05-06
 
 ### Changed
