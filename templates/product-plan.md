@@ -10,6 +10,7 @@ description: "Full product plan from T0 to T14"
 - **Founder:** [Name]
 - **Mode:** Solo / Team
 - **Industry:** [Industry]
+- **Target Audience:** [Vibe coders / Startup founders / Freelancers / Agencies / Vietnamese founders]
 
 ---
 

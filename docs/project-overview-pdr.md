@@ -15,33 +15,35 @@
 
 ## Description
 
-Product Tower Kit is a Vietnamese-first, ADHD-friendly product management toolkit for Claude Code. It provides a 14-tier framework (T0→T14) with anti-bias enforcement (AB1→AB6), a PMF gate system (≥30/50), 5 specialized agents, 12 skills, 7 commands, and 3 hooks.
+Product Tower Kit is a product management toolkit for vibe coders and startup founders. It provides a 14-tier framework (T0→T14) with anti-bias enforcement (AB1→AB6), a PMF gate system (≥30/50), 5 specialized agents, 12 skills, 7 commands, and 3 hooks.
 
-**Inspired by:** Product Management for Managers — Hiếu (Vietnamese PM, Australia)
+**For:** Vibe coders, startup founders, freelancers, agencies, Vietnamese founders, ADHD founders.
 
 ---
 
 ## Target Audience
 
-| Segment | Description |
-|---------|-------------|
-| **Solo Founders** | One-person teams validating ideas before building |
-| **Indie Hackers** | Bootstrappers needing structured product validation |
-| **Vietnamese PM Community** | Vietnamese-first product managers |
-| **ADHD Founders** | Need clear next actions, one tier at a time |
-| **Claude Code Users** | Developers using Claude Code for product work |
+| Segment | Size | Description |
+|---------|------|-------------|
+| **Vibe Coders** | 3M+ | Developers using AI coding tools (Claude Code, Cursor, Copilot) |
+| **Startup Founders** | 5M+ | Solo or small team founders validating ideas |
+| **Freelancers** | 500K+ | PM consultants using frameworks for client work |
+| **Agencies** | 100K+ | Dev shops using templates for projects |
+| **Vietnamese Founders** | 50K+ | Vietnamese-first PM framework |
+| **ADHD Founders** | 50K+ | Need clear next actions, one tier at a time |
 
 ---
 
 ## Problem Statement
 
-**No product management toolkit exists for AI coding tools.**
+**No product management toolkit exists for vibe coders.**
 
 - Existing PM frameworks (Lean Startup, Jobs-to-be-Done) are manual and paper-based
 - AI coding tools (Claude Code, Cursor) lack structured product validation
-- Solo founders skip market research and build blindly
+- Vibe coders ship fast but validate late (build first, ask questions never)
 - Bias in AI-generated research goes unchecked
 - No code-enforced gates to prevent premature building
+- No PM framework integrated with AI coding tools
 
 ---
 
@@ -83,7 +85,8 @@ T0: Market Research 🔍        ← DATA
 2. **Code-Enforced Gates** — PMF ≥ 30/50 required to proceed
 3. **Confidence Tagging** — Every data point scored (60%-95%)
 4. **ADHD-Friendly** — One tier at a time, clear next actions
-5. **Vietnamese-First** — Vietnamese prompts and documentation
+5. **Multi-Platform** — Works with Claude Code, Cursor, and other AI tools
+6. **Reusable** — Use for every project you build
 
 ---
 
@@ -101,11 +104,26 @@ T0: Market Research 🔍        ← DATA
 
 | Metric | Target (6 months) | Target (12 months) |
 |--------|-------------------|---------------------|
-| **npm Downloads** | 100/month | 500/month |
-| **GitHub Stars** | 50 | 200 |
-| **Revenue** | $500 MRR | $2,000 MRR |
-| **Active Projects** | 20 | 100 |
+| **npm Downloads** | 500/month | 2,000/month |
+| **GitHub Stars** | 200 | 1,000 |
+| **Revenue** | $2,000 MRR | $10,000 MRR |
+| **Active Projects** | 100 | 500 |
 | **PMF Pass Rate** | 60% | 70% |
+| **Free Users** | 1,000 | 5,000 |
+| **Paid Users** | 100 | 500 |
+
+---
+
+## Market Size
+
+| Segment | Users | Conversion | Revenue Potential |
+|---------|------:|------------|------------------|
+| Vibe Coders | 3M+ | 0.1% | $300K-600K |
+| Startup Founders | 5M+ | 0.05% | $250K-500K |
+| Vietnamese Founders | 50K+ | 1% | $25K-50K |
+| PM Freelancers | 500K+ | 0.1% | $50K-100K |
+| Agencies | 100K+ | 0.1% | $20K-40K |
+| **Total** | **8.6M+** | | **$645K-1.3M** |
 
 ---
 

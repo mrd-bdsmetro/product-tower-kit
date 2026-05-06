@@ -1,20 +1,30 @@
 ---
 name: market-research
-version: 1.0.0
+version: 1.1.0
 description: |
   T0 Market Research skill. 2 modes: Express (AI search, 60%) and Pro (Deep Research, 80%).
   Mega Prompt template for Google Deep Research. Data saturation check.
+  For vibe coders, startup founders, freelancers, agencies.
 triggers:
   - "research thị trường"
   - "market research"
   - "thu thập data"
   - "deep research"
+  - "market size"
+  - "competitor"
 ---
 
 # Market Research — T0
 
 ## Goal
 Thu thập data thị trường cho product. 2 modes: Express (nhanh) và Pro (Deep Research).
+
+## Target Audiences
+- **Vibe coders** — Developers using AI coding tools (Claude Code, Cursor, Copilot)
+- **Startup founders** — Solo or small team founders validating ideas
+- **Freelancers** — PM consultants using frameworks for client work
+- **Agencies** — Dev shops using templates for projects
+- **Vietnamese founders** — Vietnamese-first PM framework
 
 ---
 

@@ -1,10 +1,11 @@
 ---
 name: product-tower
-version: 1.0.0
+version: 1.1.0
 description: |
   Product Tower Kit — Master Orchestrator. 14-tier product management framework.
-  Anti-Bias enforcement (AB1-AB6). PMF gate system. Vietnamese-first.
-  Routes to 5 agents + 12 skills. ADHD-friendly solo founder mode.
+  Anti-Bias enforcement (AB1-AB6). PMF gate system.
+  For vibe coders, startup founders, freelancers, agencies.
+  Routes to 5 agents + 12 skills. ADHD-friendly.
 triggers:
   - "build product"
   - "product plan"
@@ -14,6 +15,9 @@ triggers:
   - "chạy product tower"
   - "build cái gì"
   - "nên ship gì"
+  - "vibe code"
+  - "startup"
+  - "MVP"
 ---
 
 # Product Tower Kit — Master Orchestrator
@@ -22,8 +26,8 @@ triggers:
 Điều phối quá trình build sản phẩm theo mô hình **Product Tower 14 tầng**.
 Mọi quyết định product dựa trên data + user insight, không dựa cảm tính founder.
 
-> **Source**: Product Management for Managers — Hiếu (Vietnamese PM, Australia)
-> **Nguyên tắc**: User-Centric, Not CEO-Centric
+> **Target**: Vibe coders, startup founders, freelancers, agencies, solo founders
+> **Nguyên tắc**: User-Centric, Not CEO-Centric. Validate before you code.
 
 ---
 

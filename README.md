@@ -1,16 +1,21 @@
 # Product Tower Kit
 
-Product management toolkit for Claude Code — validate ideas, score PMF, scope MVPs.
+Product management toolkit for vibe coders — validate ideas before you code.
 
-**Vietnamese-first. ADHD-friendly. Solo founder mode.**
+**For vibe coders, startup founders, freelancers, agencies.**
 
 ---
 
 ## What is Product Tower Kit?
 
-A complete product management system powered by Claude Code. Copy into your project, run `/pt:init`, and follow the 14-tier framework to validate ideas before building.
+A complete product management system for AI coding tools (Claude Code, Cursor, GitHub Copilot). Copy into your project, run `/pt:init`, and follow the 14-tier framework to validate ideas before building.
 
-**Inspired by:** Product Management for Managers — Hiếu (Vietnamese PM, Australia)
+**Who uses this:**
+- 🚀 **Vibe coders** — Add product validation to your AI coding workflow
+- 💡 **Startup founders** — Validate ideas systematically before investing dev time
+- 🇻🇳 **Vietnamese founders** — Vietnamese-first PM framework
+- 🧠 **ADHD founders** — One tier at a time, clear next actions
+- 💼 **Freelancers & agencies** — Reusable PM framework for client projects
 
 ---
 
@@ -23,6 +28,8 @@ A complete product management system powered by Claude Code. Copy into your proj
 - **12 Skills** — Complete PM toolkit with Claude Code integration
 - **Confidence Tagging** — Every data point scored (60%-95%)
 - **ADHD-Friendly** — One tier at a time, clear next actions
+- **Multi-Project** — Reusable for every project you build
+- **Multi-Platform** — Works with Claude Code, Cursor, and other AI tools
 
 ---
 

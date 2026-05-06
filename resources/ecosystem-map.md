@@ -1,5 +1,16 @@
 # Product Tower Kit — Ecosystem Map
 
+## Target Audiences
+
+| Segment | Size | Use Case |
+|---------|------|----------|
+| **Vibe coders** | 3M+ | PM framework for AI coding workflow |
+| **Startup founders** | 5M+ | Validate before building |
+| **Freelancers** | 500K+ | Reusable framework for clients |
+| **Agencies** | 100K+ | Template for projects |
+| **Vietnamese founders** | 50K+ | Vietnamese-first PM framework |
+| **ADHD founders** | 50K+ | One tier at a time |
+
 ## Master Orchestration Chain
 
 ```

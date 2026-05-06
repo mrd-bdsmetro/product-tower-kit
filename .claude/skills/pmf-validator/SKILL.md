@@ -1,9 +1,10 @@
 ---
 name: pmf-validator
-version: 1.0.0
+version: 1.1.0
 description: |
   T7 PMF Validation skill. 10 PMF signals, Sean Ellis Test, PMF scoring with penalty system.
   HARD GATE: PMF(adjusted) < 30/50 = BLOCKED.
+  Handles new products (0 users) with adjusted expectations.
 triggers:
   - "PMF"
   - "validate PMF"
@@ -15,6 +16,22 @@ triggers:
 
 ## Goal
 Validate Product-Market Fit với scoring system. HARD GATE cho T8+.
+
+## Important: New Products (0 users)
+For new products with no users yet, some signals will score low (1-5):
+- Organic Growth: 1-2 (no users yet)
+- Retention Rate: 1-2 (no users yet)
+- NPS Score: 1 (no feedback yet)
+
+**This is NORMAL.** Focus on:
+1. Problem-Solution Fit (can be 4-5 with strong research)
+2. Competitor Comparison (can be 5 if no competitor)
+3. Market Timing (can be 4-5 if timing is right)
+
+**Path to PMF 30/50:**
+- Launch free tier → +3 (organic growth)
+- Get 10+ users → +3 (retention, NPS)
+- Conduct interviews → +5 (remove AB4 penalty)
 
 ---
 
