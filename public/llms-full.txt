@@ -1,0 +1,152 @@
+# Product Tower Kit
+
+> Vietnamese-first, ADHD-friendly product management toolkit for Claude Code. 14-tier framework with anti-bias enforcement, PMF gate system, and 5 specialized agents.
+
+## Quick Links
+
+- [Quickstart Guide](docs/quickstart.md)
+- [Project Overview & PDR](docs/project-overview-pdr.md)
+- [System Architecture](docs/system-architecture.md)
+- [Code Standards](docs/code-standards.md)
+- [Codebase Summary](docs/codebase-summary.md)
+- [Ecosystem Map](resources/ecosystem-map.md)
+
+## Install
+
+```bash
+npx product-tower-kit init
+# or
+npm install -g product-tower-kit && product-tower init
+```
+
+## The Tower
+
+```
+T14: Feedback Loop        ← MEASURE & ITERATE
+T13: QA / Validation      ← BUILD
+T12: Development
+T11: UI Design            ← DESIGN
+T10: UX Design
+T9.5: Offer Bridge        ← OFFER DESIGN
+T9: User Stories           ← PRODUCT
+T8: Feature Set
+T7: PMF Validation         ← STRATEGY (HARD GATE ≥30/50)
+───────────────────────────
+🔴 ANTI-BIAS LAYER         ← ENFORCEMENT
+AB1: Counter-Search
+AB2: Red Team
+AB3: Field Observation
+AB4: User Interview
+AB5: Strategic Analysis
+AB6: Founder Insight
+───────────────────────────
+T6: Unmet Needs            ← DISCOVERY
+T5: User Needs
+T4: User Personas
+T3: Segment Filter         ← FOUNDATION
+T2: Market Segmentation
+T1: Target Market
+T0: Market Research         ← DATA
+```
+
+## CLI Commands
+
+```bash
+product-tower init              # Initialize project
+product-tower check T1          # Check gate
+product-tower complete T0       # Mark complete
+product-tower pmf 44 -4         # Set PMF score
+product-tower status            # Show status
+product-tower assess            # Quick health check
+product-tower naming            # Show naming convention
+```
+
+## Claude Code Commands
+
+```
+/pt:init                        # Initialize project
+/pt:research [topic]            # Run T0 market research
+/pt:validate PMF                # Run T7 PMF validation
+/pt:scope features              # Run T8-T9 feature scoping
+/pt:assess                      # Quick health check
+/pt:status                      # Show pipeline status
+/pt:report                      # Generate full report
+```
+
+## Skills (12)
+
+| Skill | Tiers | Purpose |
+|-------|-------|---------|
+| product-tower | ALL | Master orchestrator |
+| market-research | T0 | Data collection |
+| market-segmentation | T1-T3 | Segment targeting |
+| user-discovery | T4-T6 | Persona + needs |
+| pmf-validator | T7 | PMF gate |
+| pricing-strategy | T9.5 | Offer design |
+| competitor-analysis | T0-CP | Competitive map |
+| deep-research-parser | Pre-T0 | Parse deep research |
+| analytics-feedback | T14 | Feedback loop |
+| delivery-tower | D1-D6 | GTM + launch |
+| sales-tower | S0-S9 | Hormozi framework |
+| product-sale | P0-P10 | Unified BUILD+SELL |
+
+## Agents (5)
+
+| Agent | Role | Mode |
+|-------|------|------|
+| product-planner | Tier progression | Sequential |
+| market-researcher | Data collection | Parallel |
+| anti-bias-challenger | AB1-AB6 enforcement | Adversarial |
+| pmf-validator | PMF scoring | Analytical |
+| feature-scoper | Feature scoping | Collaborative |
+
+## Gate System
+
+```
+T-1 → T0 → T1 → T2 → T3 → T4 → T5 → T6
+                ↓
+              AB1 → AB2 → AB3 → AB4 → AB5/AB6
+                ↓
+              T7 (PMF Gate: ≥30/50)
+                ↓
+              T8 → T9 → T9.5 → T14
+```
+
+## PMF Scoring
+
+| Anti-Bias Status | Penalty |
+|------------------|--------:|
+| Desk-only (no AB) | -10 |
+| +AB1 only | -5 |
+| +AB1+AB2 | -2.5 |
+| Full AB (AB1-AB4) | 0 |
+| +AB5 | +0.5 |
+| +AB6 | +1.5 |
+
+Threshold: ≥30/50 = GO
+
+## Confidence Tagging
+
+| Tag | Score | Source |
+|-----|-------|--------|
+| 🤖 | 60% | AI-generated |
+| 📊 | 80% | Cited data |
+| 👤 | 90% | User interview |
+| ✅ | 95% | Validated |
+
+## Pricing
+
+| Tier | Price | Includes |
+|------|-------|----------|
+| Starter | $49 | Core skills (T0-T7), gate checker, basic templates |
+| Pro | $99 | All skills (T0-T14), agents, hooks, advanced templates |
+| Team | $199 | Pro + multi-project, team collaboration, priority support |
+
+## Documentation
+
+- [Project Overview & PDR](docs/project-overview-pdr.md): Project identity, target audience, problem statement, solution, pricing, success metrics, timeline
+- [Codebase Summary](docs/codebase-summary.md): LOC breakdown, directory structure, 3-language stack, 6 systems, dependencies
+- [Code Standards](docs/code-standards.md): File naming conventions, SKILL.md format, agent format, Python/PowerShell/Node.js standards
+- [System Architecture](docs/system-architecture.md): Architecture diagram, gate system design, PMF scoring, data flow, integration points
+- [Quickstart Guide](docs/quickstart.md): Installation, initialization, step-by-step workflow, CLI commands
+- [Ecosystem Map](resources/ecosystem-map.md): Skill-agent-tier routing, master orchestration chain

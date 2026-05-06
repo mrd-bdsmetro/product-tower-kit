@@ -1,0 +1,79 @@
+# Product Tower Kit
+
+> Vietnamese-first, ADHD-friendly product management toolkit for Claude Code. 14-tier framework with anti-bias enforcement, PMF gate system, and 5 specialized agents.
+
+## Documentation
+
+- [Project Overview & PDR](docs/project-overview-pdr.md): Project identity, target audience, problem statement, solution, pricing, success metrics, timeline, and competitive landscape
+- [Codebase Summary](docs/codebase-summary.md): LOC breakdown, directory structure, 3-language stack, 6 systems, dependencies, testing strategy, and state management
+- [Code Standards](docs/code-standards.md): File naming conventions, SKILL.md format, agent format, command format, Python/PowerShell/Node.js standards, and git conventions
+- [System Architecture](docs/system-architecture.md): High-level architecture diagram, gate system design (19-tier DAG), PMF scoring, confidence tagging, data flow, and integration points
+- [Quickstart Guide](docs/quickstart.md): Installation, initialization, step-by-step workflow, CLI commands, and Claude Code slash commands
+- [Ecosystem Map](resources/ecosystem-map.md): Skill-agent-tier routing, master orchestration chain, and 12 skills + 5 agents mapping
+
+## Skills
+
+- [product-tower](/.claude/skills/product-tower/SKILL.md): Master orchestrator — 14-tier framework overview, routing table, anti-bias rules, gate enforcement
+- [market-research](/.claude/skills/market-research/SKILL.md): T0 Market Research — 2 modes (Express/Pro), Deep Research integration, saturation check
+- [market-segmentation](/.claude/skills/market-segmentation/SKILL.md): T1-T3 — Target market selection, 3-5 segments, segment filter
+- [user-discovery](/.claude/skills/user-discovery/SKILL.md): T4-T6 — Behavior-based personas, Impact×Frequency needs, 4-criteria unmet filter
+- [pmf-validator](/.claude/skills/pmf-validator/SKILL.md): T7 PMF Validation — 10 signals (/50), Sean Ellis Test, penalty system, HARD GATE ≥30/50
+- [pricing-strategy](/.claude/skills/pricing-strategy/SKILL.md): T9.5 Offer Bridge — 6 pricing models, Hormozi Value Equation, WTP validation
+- [competitor-analysis](/.claude/skills/competitor-analysis/SKILL.md): T0-CP — Positioning map, Peter Thiel moat analysis (4 types)
+- [deep-research-parser](/.claude/skills/deep-research-parser/SKILL.md): Pre-T0 — Parse Deep Research markdown → pre-fill T0-T6, gap report
+- [analytics-feedback](/.claude/skills/analytics-feedback/SKILL.md): T14 — Monthly feedback loop (Measure→Learn→Iterate), churn/NPS triggers
+- [delivery-tower](/.claude/skills/delivery-tower/SKILL.md): D1-D6 — GTM→UX→UI→Metrics→Launch→Review, requires T8+T9 + PMF≥30
+- [sales-tower](/.claude/skills/sales-tower/SKILL.md): S0-S9 — Hormozi framework, Grand Slam Offer, CLOSER script, Core Four lead gen
+- [product-sale](/.claude/skills/product-sale/SKILL.md): Unified BUILD+SELL — 3 modes: BUILD ONLY / SELL ONLY / BUILD+SELL
+
+## Agents
+
+- [product-planner](/.claude/agents/product-planner.md): Plan tier progression, detect blockers, suggest next steps (sequential mode)
+- [market-researcher](/.claude/agents/market-researcher.md): Collect market data, validate sources, score confidence (parallel mode)
+- [anti-bias-challenger](/.claude/agents/anti-bias-challenger.md): AB1-AB6 enforcement, red team, strategic analysis (adversarial mode)
+- [pmf-validator](/.claude/agents/pmf-validator.md): Score 10 PMF signals, GO/NO-GO decision, pivot suggestions (analytical mode)
+- [feature-scoper](/.claude/agents/feature-scoper.md): MoSCoW features, Impact×Effort matrix, user stories (collaborative mode)
+
+## Commands
+
+- [/pt:init](/.claude/commands/pt-init.md): Initialize project with data/ directory and pipeline_state.json
+- [/pt:research](/.claude/commands/pt-research.md): Run T0 market research with market-researcher agent
+- [/pt:validate](/.claude/commands/pt-validate.md): Run T7 PMF validation with pmf-validator agent
+- [/pt:scope](/.claude/commands/pt-scope.md): Run T8-T9 feature scoping with feature-scoper agent
+- [/pt:assess](/.claude/commands/pt-assess.md): Quick health check — score all tiers 0-3, tower score /42
+- [/pt:status](/.claude/commands/pt-status.md): Show pipeline status — completed, skipped, PMF, anti-bias
+- [/pt:report](/.claude/commands/pt-report.md): Generate full product tower report
+
+## Hooks
+
+- [gate-check.sh](/.claude/hooks/gate-check.sh): PreToolUse hook — auto-block writes to data/t*.md if prerequisites missing
+- [pmf-alert.sh](/.claude/hooks/pmf-alert.sh): PostToolUse hook — alert when PMF output shows NO-GO/BLOCKED
+- [tier-progress.sh](/.claude/hooks/tier-progress.sh): SessionStart hook — show current tier progress on session start
+
+## Rules
+
+- [product-workflow](/.claude/rules/product-workflow.md): Core workflow rules — 9-step process, gate rules, anti-bias rules, confidence tagging
+- [gate-enforcement](/.claude/rules/gate-enforcement.md): Gate enforcement rules — tier dependencies, force skip logic, PMF gate
+- [anti-bias-rules](/.claude/rules/anti-bias-rules.md): Anti-bias rules — AB1-AB6 definitions, purpose, rules, output files, PMF bonuses
+
+## Scripts
+
+- [gate_checker.py](scripts/gate_checker.py): Python gate enforcement CLI — init, check, complete, pmf, status, assess, naming
+- [harness-health.ps1](scripts/harness-health.ps1): PowerShell health check — 70+ checks across all components
+- [harness-eval.ps1](scripts/harness-eval.ps1): PowerShell harness evaluator — runs health + syntax + gate tests
+- [invariant-checks.js](scripts/invariant-checks.js): Node.js invariant checks — package, skills, agents, commands, hooks, gate consistency
+- [syntax-check.js](scripts/syntax-check.js): Node.js syntax validation — Node.js, Python, JSON, SKILL.md frontmatter
+
+## Templates
+
+- [product-plan](templates/product-plan.md): Full product plan template — T0→T14 with sections for each tier
+
+## CLI
+
+- [product-tower.js](bin/product-tower.js): CLI entry point — init, check, complete, pmf, status, assess, naming, version
+
+## Config
+
+- [package.json](package.json): npm package config — zero dependencies, Node.js ≥18
+- [settings.json](/.claude/settings.json): Hook configuration — PreToolUse, PostToolUse, SessionStart hooks
+- [index.js](index.js): Module exports — KIT_ROOT, SKILLS_DIR, SCRIPTS_DIR, getVersion(), getSkills()
