@@ -26,6 +26,17 @@ A complete product management system powered by Claude Code. Copy into your proj
 
 ---
 
+## Documentation
+
+- [Project Overview & PDR](docs/project-overview-pdr.md) — Project overview, target audience, pricing, timeline
+- [Codebase Summary](docs/codebase-summary.md) — LOC breakdown, architecture, dependencies, testing strategy
+- [Code Standards](docs/code-standards.md) — Directory structure, naming conventions, code patterns
+- [System Architecture](docs/system-architecture.md) — 6 systems, gate system, state management, data flow
+- [Quickstart Guide](docs/quickstart.md) — Installation, setup, step-by-step guide
+- [Ecosystem Map](resources/ecosystem-map.md) — Skills, agents, tier mapping
+
+---
+
 ## Quick Start
 
 ```bash
@@ -111,11 +122,9 @@ product-tower naming            # Show naming convention
 
 ---
 
-## Documentation
+## Resources
 
-- [Quickstart Guide](docs/quickstart.md)
-- [Ecosystem Map](resources/ecosystem-map.md)
-- [Mega Prompt](.claude/skills/market-research/references/mega-prompt.md)
+- [Mega Prompt](.claude/skills/market-research/references/mega-prompt.md) — Deep research prompt template
 
 ---
 
