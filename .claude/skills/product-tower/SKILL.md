@@ -2,7 +2,7 @@
 name: product-tower
 version: 1.1.0
 description: |
-  Product Tower Kit — Master Orchestrator. 14-tier product management framework.
+  Product Tower Kit - Master Orchestrator. 14-tier product management framework.
   Anti-Bias enforcement (AB1-AB6). PMF gate system.
   For vibe coders, startup founders, freelancers, agencies.
   Routes to 5 agents + 12 skills. ADHD-friendly.
@@ -20,7 +20,7 @@ triggers:
   - "MVP"
 ---
 
-# Product Tower Kit — Master Orchestrator
+# Product Tower Kit - Master Orchestrator
 
 ## Goal
 Điều phối quá trình build sản phẩm theo mô hình **Product Tower 14 tầng**.
@@ -31,7 +31,7 @@ Mọi quyết định product dựa trên data + user insight, không dựa cả
 
 ---
 
-## PRODUCT TOWER — OVERVIEW
+## PRODUCT TOWER - OVERVIEW
 
 ```
 ┌─────────────────────────────────────┐
@@ -78,13 +78,13 @@ Mọi quyết định product dựa trên data + user insight, không dựa cả
 
 ## NGUYÊN TẮC CỐT LÕI
 
-1. **User-Centric** — Mọi thứ xuất phát từ user needs, không từ ý tưởng founder
-2. **Validate Before Build** — Test giả thuyết TRƯỚC KHI viết code
-3. **No PMF = No Scale** — Tầng 7 là hard gate. PMF(adjusted) < 30/50 = KHÔNG lên tầng 8+
-4. **Data-Driven** — Quantitative (WHAT happened) + Qualitative (WHY happened)
-5. **Anti-Bias Enforced** — Counter-search + red team TRƯỚC KHI chấm PMF
-6. **Real Data Required** — AI desk research ≠ truth. Interview/observation = bắt buộc
-7. **Friction = Feature** — Không shortcut. Khó = đúng.
+1. **User-Centric** - Mọi thứ xuất phát từ user needs, không từ ý tưởng founder
+2. **Validate Before Build** - Test giả thuyết TRƯỚC KHI viết code
+3. **No PMF = No Scale** - Tầng 7 là hard gate. PMF(adjusted) < 30/50 = KHÔNG lên tầng 8+
+4. **Data-Driven** - Quantitative (WHAT happened) + Qualitative (WHY happened)
+5. **Anti-Bias Enforced** - Counter-search + red team TRƯỚC KHI chấm PMF
+6. **Real Data Required** - AI desk research ≠ truth. Interview/observation = bắt buộc
+7. **Friction = Feature** - Không shortcut. Khó = đúng.
 
 ---
 
@@ -107,18 +107,18 @@ Product Tower POINT:  T10-T14  (Design → Build → QA → Feedback) → delega
 | "competitive", "đối thủ" | competitor-analysis | anti-bias-challenger | T0-CP | None |
 | "target market", "phân khúc" | market-segmentation | product-planner | T1-T3 | T0 done? |
 | "persona", "user needs" | user-discovery | product-planner | T4-T6 | T3 done? |
-| "counter", "phản biện" | — | anti-bias-challenger | AB1 | T4 done? |
-| "red team", "sparring" | — | anti-bias-challenger | AB2 | AB1 done? |
-| "field observation" | — | — | AB3 | AB2 done? |
-| "interview user" | — | — | AB4 | AB3 done? |
+| "counter", "phản biện" | - | anti-bias-challenger | AB1 | T4 done? |
+| "red team", "sparring" | - | anti-bias-challenger | AB2 | AB1 done? |
+| "field observation" | - | - | AB3 | AB2 done? |
+| "interview user" | - | - | AB4 | AB3 done? |
 | "PMF", "validate" | pmf-validator | pmf-validator | T7 | AB1-AB4 ALL? |
-| "feature", "user story" | — | feature-scoper | T8-T9 | PMF ≥ 30? |
+| "feature", "user story" | - | feature-scoper | T8-T9 | PMF ≥ 30? |
 | "offer", "pricing" | pricing-strategy | feature-scoper | T9.5 | T9 done? |
-| "analytics", "feedback" | analytics-feedback | — | T14 | Post-launch |
+| "analytics", "feedback" | analytics-feedback | - | T14 | Post-launch |
 
 ---
 
-## ANTI-BIAS LAYER (MANDATORY — giữa T4 và T7)
+## ANTI-BIAS LAYER (MANDATORY - giữa T4 và T7)
 
 | Step | Tool | Output file |
 |------|------|-------------|

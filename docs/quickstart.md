@@ -1,4 +1,4 @@
-# Product Tower Kit — Quickstart
+# Product Tower Kit - Quickstart
 
 ## Install
 
@@ -83,7 +83,7 @@ product-tower assess
 ```
 "validate PMF cho [project]"
 ```
-→ Creates `data/t7_pmf.md` — HARD GATE
+→ Creates `data/t7_pmf.md` - HARD GATE
 
 ### T8-T9: Feature Scoping
 ```

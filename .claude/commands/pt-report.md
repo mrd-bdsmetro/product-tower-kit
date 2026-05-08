@@ -1,4 +1,4 @@
-# /pt:report — Generate Full Report
+# /pt:report - Generate Full Report
 
 ## Usage
 ```

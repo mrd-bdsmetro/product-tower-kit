@@ -13,16 +13,16 @@ triggers:
   - "chọn A hay B"
 ---
 
-# Brainstorm — Product Decisions
+# Brainstorm - Product Decisions
 
 ## Goal
 Brainstorm product solutions with trade-off analysis. Brutal honesty. No fluff.
 
 ## Core Principles
-- **YAGNI** — You Ain't Gonna Need It
-- **KISS** — Keep It Simple, Stupid
-- **DRY** — Don't Repeat Yourself
-- **Ship > Perfect** — 1 session = 1 output
+- **YAGNI** - You Ain't Gonna Need It
+- **KISS** - Keep It Simple, Stupid
+- **DRY** - Don't Repeat Yourself
+- **Ship > Perfect** - 1 session = 1 output
 
 ---
 

@@ -12,7 +12,7 @@ triggers:
   - "so sánh"
 ---
 
-# Competitor Alternatives — Comparison Pages
+# Competitor Alternatives - Comparison Pages
 
 ## Goal
 Create competitor comparison and alternative pages for SEO and sales enablement.
@@ -22,16 +22,16 @@ Create competitor comparison and alternative pages for SEO and sales enablement.
 ## 4 Page Formats
 
 ### 1. Singular Alternative
-"[Competitor] Alternative" — Why you're different from one competitor.
+"[Competitor] Alternative" - Why you're different from one competitor.
 
 ### 2. Plural Alternatives
-"Best [Competitor] Alternatives" — List of alternatives including yourself.
+"Best [Competitor] Alternatives" - List of alternatives including yourself.
 
 ### 3. You vs Competitor
-"[Your Product] vs [Competitor]" — Direct comparison.
+"[Your Product] vs [Competitor]" - Direct comparison.
 
 ### 4. Competitor vs Competitor
-"[Competitor A] vs [Competitor B]" — Compare two competitors (position yourself as alternative).
+"[Competitor A] vs [Competitor B]" - Compare two competitors (position yourself as alternative).
 
 ---
 
@@ -78,7 +78,7 @@ Switching from [Competitor] to [Your Product]:
 ### Social Proof
 ```
 "I switched from [Competitor] to [Your Product] and..."
-— [Customer Name], [Role]
+- [Customer Name], [Role]
 ```
 
 ---
@@ -107,11 +107,11 @@ competitors:
 
 ## SEO Considerations
 
-1. **Title tag** — "[Your Product] vs [Competitor]: Which is Better in 2026?"
-2. **Meta description** — Compare key features and pricing
-3. **H1** — "[Your Product] vs [Competitor]"
-4. **Internal links** — Link to your features, pricing pages
-5. **Schema markup** — Product comparison structured data
+1. **Title tag** - "[Your Product] vs [Competitor]: Which is Better in 2026?"
+2. **Meta description** - Compare key features and pricing
+3. **H1** - "[Your Product] vs [Competitor]"
+4. **Internal links** - Link to your features, pricing pages
+5. **Schema markup** - Product comparison structured data
 
 ---
 

@@ -33,7 +33,7 @@ Search keywords:
 
 ## AB2 Red Team
 ```
-🔴 RED TEAM CHALLENGE — [Project]
+🔴 RED TEAM CHALLENGE - [Project]
 
 Assumption: [PMF signal]
 Counter-argument: [why it might be wrong]

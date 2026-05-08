@@ -1,5 +1,5 @@
 #!/bin/bash
-# gate-check.sh — PreToolUse hook
+# gate-check.sh - PreToolUse hook
 # Auto gate enforcement before writing to data/t*.md
 
 INPUT=$(cat)

@@ -1,4 +1,4 @@
-# /pt:assess — Quick Tower Health Check
+# /pt:assess - Quick Tower Health Check
 
 ## Usage
 ```
@@ -23,7 +23,7 @@
 
 ## Output
 ```
-🏗️ PRODUCT TOWER ASSESSMENT — [Project]
+🏗️ PRODUCT TOWER ASSESSMENT - [Project]
 
 DATA:           T0 [0-3] | [detail]
 FOUNDATION:     T1 [0-3] | T2 [0-3] | T3 [0-3]

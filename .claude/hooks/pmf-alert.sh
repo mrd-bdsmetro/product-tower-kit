@@ -1,5 +1,5 @@
 #!/bin/bash
-# pmf-alert.sh — PostToolUse hook
+# pmf-alert.sh - PostToolUse hook
 # Alert when PMF score is set
 
 INPUT=$(cat)

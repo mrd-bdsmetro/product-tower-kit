@@ -10,7 +10,7 @@ triggers:
   - "chọn thị trường"
 ---
 
-# Market Segmentation — T1-T3
+# Market Segmentation - T1-T3
 
 ## Goal
 Chọn thị trường mục tiêu, phân khúc, và filter segments.

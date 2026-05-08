@@ -11,7 +11,7 @@ triggers:
   - "phân tích"
 ---
 
-# Sequential Thinking — Product Decisions
+# Sequential Thinking - Product Decisions
 
 ## Goal
 Structured, reflective problem-solving for complex product decisions.

@@ -11,7 +11,7 @@ triggers:
   - "measure"
 ---
 
-# Analytics & Feedback — T14
+# Analytics & Feedback - T14
 
 ## Goal
 Post-launch feedback loop. Measure → Learn → Iterate.
@@ -51,7 +51,7 @@ Post-launch feedback loop. Measure → Learn → Iterate.
 ## OUTPUT
 
 ```markdown
-# T14: Feedback Loop — [Project]
+# T14: Feedback Loop - [Project]
 
 ## Metrics (Month X)
 - Traffic: X

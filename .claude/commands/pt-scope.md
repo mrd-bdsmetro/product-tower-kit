@@ -1,4 +1,4 @@
-# /pt:scope — Run T8-T9 Feature Scoping
+# /pt:scope - Run T8-T9 Feature Scoping
 
 ## Usage
 ```
@@ -20,7 +20,7 @@
 
 ## Output
 ```
-🎯 FEATURE SCOPING — [Project]
+🎯 FEATURE SCOPING - [Project]
 
 PMF: X/50 ✅
 Features: X must, X should, X could

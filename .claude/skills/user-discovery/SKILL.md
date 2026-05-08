@@ -10,7 +10,7 @@ triggers:
   - "build persona"
 ---
 
-# User Discovery — T4-T6
+# User Discovery - T4-T6
 
 ## Goal
 Discover users: who they are, what they need, what's missing.

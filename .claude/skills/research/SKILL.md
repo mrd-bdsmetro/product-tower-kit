@@ -12,7 +12,7 @@ triggers:
   - "thu thập data"
 ---
 
-# Research — Market & Product
+# Research - Market & Product
 
 ## Goal
 Conduct systematic research for product decisions. Max 5 research calls per session.
@@ -74,8 +74,8 @@ Conduct systematic research for product decisions. Max 5 research calls per sess
 2. ...
 
 ## Sources
-- [Source 1](url) — credibility: high/medium/low
-- [Source 2](url) — credibility: high/medium/low
+- [Source 1](url) - credibility: high/medium/low
+- [Source 2](url) - credibility: high/medium/low
 ```
 
 ---

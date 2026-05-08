@@ -1,4 +1,4 @@
-# /pt:research — Run T0 Market Research
+# /pt:research - Run T0 Market Research
 
 ## Usage
 ```
@@ -18,7 +18,7 @@
 
 ## Output
 ```
-🔍 MARKET RESEARCH — [Topic]
+🔍 MARKET RESEARCH - [Topic]
 
 Collecting data...
 ✅ T0 complete: data/t0_market_research.md

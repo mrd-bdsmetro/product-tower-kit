@@ -11,7 +11,7 @@ triggers:
   - "ship product"
 ---
 
-# Delivery Tower — D1-D6
+# Delivery Tower - D1-D6
 
 ## Goal
 Execute delivery: GTM → Design → Launch → Measure.

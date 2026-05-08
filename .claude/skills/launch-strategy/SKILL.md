@@ -13,7 +13,7 @@ triggers:
   - "GTM"
 ---
 
-# Launch Strategy — Product Launch
+# Launch Strategy - Product Launch
 
 ## Goal
 Plan and execute product launches. From MVP to Product Hunt to scale.

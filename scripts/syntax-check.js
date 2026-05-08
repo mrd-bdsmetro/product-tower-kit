@@ -40,7 +40,7 @@ for (const file of nodeFiles) {
 // Check Python files have valid syntax
 console.log('\n[Python Syntax]');
 
-const pythonFiles = ['scripts/gate_checker.py'];
+const pythonFiles = ['scripts/gate_checker.py', 'scripts/web_search.py', 'scripts/valyu_search.py'];
 
 for (const file of pythonFiles) {
   check(`${file} has valid structure`, () => {

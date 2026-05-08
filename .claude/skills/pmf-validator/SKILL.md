@@ -12,7 +12,7 @@ triggers:
   - "check PMF"
 ---
 
-# PMF Validator — T7
+# PMF Validator - T7
 
 ## Goal
 Validate Product-Market Fit với scoring system. HARD GATE cho T8+.
@@ -83,7 +83,7 @@ Threshold: PMF(adjusted) ≥ 30/50 = GO
 ## OUTPUT
 
 ```markdown
-# T7: PMF Validation — [Project]
+# T7: PMF Validation - [Project]
 
 ## PMF Signals
 | # | Signal | Score | Evidence |

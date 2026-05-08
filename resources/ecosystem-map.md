@@ -1,4 +1,4 @@
-# Product Tower Kit — Ecosystem Map
+# Product Tower Kit - Ecosystem Map
 
 ## Target Audiences
 
@@ -15,20 +15,20 @@
 
 ```
 product-tower (WHAT to build + WHY)
-  ├── product-sale (BUILD + SELL execution)
-  │   ├── sales-tower (offer design + CLOSER script)
-  │   └── delivery-tower (GTM + launch execution)
-  └── analytics-feedback (post-launch loop)
+  - product-sale (BUILD + SELL execution)
+    - sales-tower (offer design + CLOSER script)
+    - delivery-tower (GTM + launch execution)
+  - analytics-feedback (post-launch loop)
 ```
 
 ---
 
-## Skills (17 total)
+## Skills (23 total)
 
 | # | Skill | Tiers | Purpose |
 |---|-------|-------|---------|
 | 1 | product-tower | ALL | Master orchestrator |
-| 2 | market-research | T0 | Data collection (Express/Pro/Valyu modes) |
+| 2 | market-research | T0 | Data collection (5 providers) |
 | 3 | market-segmentation | T1-T3 | Segment targeting |
 | 4 | user-discovery | T4-T6 | Persona + needs |
 | 5 | pmf-validator | T7 | PMF gate |
@@ -39,11 +39,29 @@ product-tower (WHAT to build + WHY)
 | 10 | delivery-tower | D1-D6 | GTM + launch |
 | 11 | sales-tower | S0-S9 | Hormozi framework |
 | 12 | product-sale | P0-P10 | Unified BUILD+SELL |
-| 13 | brainstorm | — | Trade-off analysis, anti-rationalization |
-| 14 | research | — | Systematic research with confidence scoring |
-| 15 | problem-solving | — | 5 Whys, 80/20, Inversion |
-| 16 | retro | — | Sprint retrospectives for T14 |
-| 17 | sequential-thinking | — | Structured problem-solving |
+| 13 | brainstorm | - | Trade-off analysis, anti-rationalization |
+| 14 | research | - | Systematic research with confidence scoring |
+| 15 | problem-solving | - | 5 Whys, 80/20, Inversion |
+| 16 | retro | - | Sprint retrospectives for T14 |
+| 17 | sequential-thinking | - | Structured problem-solving |
+| 18 | launch-strategy | - | ORB Framework, 5-phase launch |
+| 19 | marketing-ideas | - | 140+ proven marketing ideas |
+| 20 | marketing-psychology | - | 70+ mental models |
+| 21 | competitor-alternatives | - | Comparison page templates |
+| 22 | free-tool-strategy | - | Engineering-as-marketing |
+| 23 | onboarding-cro | - | User onboarding and activation |
+
+---
+
+## Web Search Providers (5 total)
+
+| Provider | Description | Free | Mode |
+|----------|-------------|------|------|
+| **Valyu** | Real-time web + proprietary content (papers, filings, patents) | No | web/deep/academic |
+| **Firecrawl** | Scrape any website -> markdown | No | scrape/crawl |
+| **Brave Search** | Free web search, no tracking | Yes | web/news |
+| **Tavily** | AI-optimized search, free tier available | Yes | basic/advanced |
+| **crawl4ai** | AI-powered extraction, Python, free | Yes | scrape/crawl |
 
 ---
 
@@ -65,23 +83,23 @@ product-tower (WHAT to build + WHY)
 
 | Tier | Skill | Agent |
 |------|-------|-------|
-| T-1 | — | product-planner |
+| T-1 | - | product-planner |
 | T0 | market-research | market-researcher |
 | T0-CP | competitor-analysis | anti-bias-challenger |
 | T1-T3 | market-segmentation | product-planner |
 | T4-T6 | user-discovery | product-planner |
-| AB1 | — | anti-bias-challenger |
-| AB2 | — | anti-bias-challenger |
-| AB3 | — | (manual) |
-| AB4 | — | (manual) |
-| AB5 | — | anti-bias-challenger |
-| AB6 | — | (manual) |
+| AB1 | - | anti-bias-challenger |
+| AB2 | - | anti-bias-challenger |
+| AB3 | - | (manual) |
+| AB4 | - | (manual) |
+| AB5 | - | anti-bias-challenger |
+| AB6 | - | (manual) |
 | T7 | pmf-validator | pmf-validator |
-| T8-T9 | — | feature-scoper |
+| T8-T9 | - | feature-scoper |
 | T9.5 | pricing-strategy | feature-scoper |
-| T14 | analytics-feedback | — |
-| — | brainstorm | brainstormer |
-| — | research | researcher |
-| — | problem-solving | — |
-| — | retro | — |
-| — | sequential-thinking | — |
+| T14 | analytics-feedback | - |
+| - | brainstorm | brainstormer |
+| - | research | researcher |
+| - | problem-solving | - |
+| - | retro | - |
+| - | sequential-thinking | - |

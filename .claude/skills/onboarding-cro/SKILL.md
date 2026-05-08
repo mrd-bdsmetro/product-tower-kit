@@ -12,7 +12,7 @@ triggers:
   - "aha moment"
 ---
 
-# Onboarding CRO — User Activation
+# Onboarding CRO - User Activation
 
 ## Goal
 Optimize post-signup onboarding to reach "aha moment" faster.
@@ -105,16 +105,16 @@ The moment when users first experience the core value of your product.
 
 ## Experiment Ideas
 
-1. **Simplify flow** — Remove unnecessary steps
-2. **Add guided tour** — Step-by-step walkthrough
-3. **Personalize** — Ask goals, customize experience
-4. **Quick wins** — Pre-fill templates, show examples
-5. **Social proof** — Show what others achieved
-6. **Progress** — Show completion percentage
-7. **Rewards** — Celebrate milestones
-8. **Email sequences** — Drip content over time
-9. **In-app messages** — Contextual help
-10. **Live chat** — Real-time support
+1. **Simplify flow** - Remove unnecessary steps
+2. **Add guided tour** - Step-by-step walkthrough
+3. **Personalize** - Ask goals, customize experience
+4. **Quick wins** - Pre-fill templates, show examples
+5. **Social proof** - Show what others achieved
+6. **Progress** - Show completion percentage
+7. **Rewards** - Celebrate milestones
+8. **Email sequences** - Drip content over time
+9. **In-app messages** - Contextual help
+10. **Live chat** - Real-time support
 
 ---
 

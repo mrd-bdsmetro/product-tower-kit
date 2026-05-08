@@ -13,7 +13,7 @@ triggers:
   - "debug"
 ---
 
-# Problem-Solving — Product Challenges
+# Problem-Solving - Product Challenges
 
 ## Goal
 Systematic approaches for different types of stuck-ness in product development.

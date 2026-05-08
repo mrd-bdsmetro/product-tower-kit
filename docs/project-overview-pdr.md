@@ -1,21 +1,25 @@
-# Product Tower Kit — Project Overview & PDR
+# Product Tower Kit - Project Overview & PDR
 
 ## Project Identity
 
 | Field | Value |
 |-------|-------|
 | **Name** | Product Tower Kit |
-| **Version** | 1.3.0 |
+| **Version** | 1.4.0 |
 | **Author** | MR.D |
 | **License** | Proprietary |
 | **Repository** | [github.com/AIScale-Corp/product-tower-kit](https://github.com/AIScale-Corp/product-tower-kit) |
 | **npm Package** | `product-tower-kit` |
+| **Files** | 91 files | 6,278 LOC |
+| **PMF Status** | 22/50 (NO-GO) | AB4 placeholder |
 
 ---
 
 ## Description
 
-Product Tower Kit is a product management toolkit for vibe coders and startup founders. It provides a 14-tier framework (T0→T14) with anti-bias enforcement (AB1→AB6), a PMF gate system (≥30/50), 7 specialized agents, 17 skills, 7 commands, and 3 hooks. Includes Valyu search integration for enhanced market research.
+Product Tower Kit is a product management toolkit for vibe coders and startup founders. It provides a 19-tier framework (T-1→T14) with anti-bias enforcement (AB1→AB6), a PMF gate system (≥30/50), 7 specialized agents, **23 skills**, 7 commands, and 3 hooks. Includes Valyu search integration for enhanced market research.
+
+**Current Status:** 18/19 tiers completed | PMF: 33/50 raw → 22/50 adjusted (NO-GO) | AB4 placeholder (confidence 70%)
 
 **For:** Vibe coders, startup founders, freelancers, agencies, Vietnamese founders, ADHD founders.
 
@@ -81,12 +85,12 @@ T0: Market Research 🔍        ← DATA
 
 ### Key Differentiators
 
-1. **Anti-Bias Enforcement** — AB1-AB6 mandatory layer before PMF validation
-2. **Code-Enforced Gates** — PMF ≥ 30/50 required to proceed
-3. **Confidence Tagging** — Every data point scored (60%-95%)
-4. **ADHD-Friendly** — One tier at a time, clear next actions
-5. **Multi-Platform** — Works with Claude Code, Cursor, and other AI tools
-6. **Reusable** — Use for every project you build
+1. **Anti-Bias Enforcement** - AB1-AB6 mandatory layer before PMF validation
+2. **Code-Enforced Gates** - PMF ≥ 30/50 required to proceed
+3. **Confidence Tagging** - Every data point scored (60%-95%)
+4. **ADHD-Friendly** - One tier at a time, clear next actions
+5. **Multi-Platform** - Works with Claude Code, Cursor, and other AI tools
+6. **Reusable** - Use for every project you build
 
 ---
 

@@ -1,4 +1,4 @@
-# /pt:validate — Run T7 PMF Validation
+# /pt:validate - Run T7 PMF Validation
 
 ## Usage
 ```
@@ -21,7 +21,7 @@
 
 ## Output
 ```
-⭐ PMF VALIDATION — [Project]
+⭐ PMF VALIDATION - [Project]
 
 Anti-Bias: AB1 ✅ AB2 ✅ AB3 ✅ AB4 ✅
 PMF Raw: X/50

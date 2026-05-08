@@ -1,4 +1,4 @@
-# /pt:status — Show Pipeline Status
+# /pt:status - Show Pipeline Status
 
 ## Usage
 ```
@@ -14,7 +14,7 @@
 
 ## Output
 ```
-📊 PIPELINE STATUS — [Project]
+📊 PIPELINE STATUS - [Project]
 
 Completed: T-1 ✅ T0 ✅ T1 ✅ T2 ✅
 Skipped: (none)

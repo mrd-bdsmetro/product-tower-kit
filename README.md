@@ -21,11 +21,12 @@ A complete product management system for AI coding tools (Claude Code, Cursor, G
 
 ## Features
 
-- **14-Tier Framework** — From market research to post-launch feedback
+- **14-Tier Framework** — From rapid validation to post-launch feedback
 - **Anti-Bias Enforcement** — AB1-AB6 mandatory layer before PMF validation
 - **PMF Gate System** — Code-enforced threshold (≥30/50) to proceed
 - **7 Specialized Agents** — Planner, researcher, challenger, validator, scoper, brainstormer, researcher
-- **17 Skills** — Complete PM toolkit with Claude Code integration + Valyu search
+- **23 Skills** — Complete PM toolkit with Claude Code integration + Valyu search
+- **7 Commands** — Slash commands for every workflow step
 - **Confidence Tagging** — Every data point scored (60%-95%)
 - **ADHD-Friendly** — One tier at a time, clear next actions
 - **Multi-Project** — Reusable for every project you build
@@ -59,21 +60,29 @@ product-tower init
 
 ---
 
-## Optional: Valyu Search API
+## Optional: Web Search Providers
 
-For enhanced market research with real-time web + proprietary content:
+Unified market research with 5 providers:
 
 ```bash
-# Install Valyu
-pip install valyu
+pip install valyu firecrawl-py brave-search tavily-python crawl4ai
+```
 
-# Set API key (get from https://valyu.ai)
-export VALYU_API_KEY=your_key
+| Provider | Description | Free |
+|----------|-------------|------|
+| Valyu | Real-time web + proprietary content (papers, filings, patents) | No |
+| Firecrawl | Scrape any website -> markdown | No |
+| Brave Search | Free web search, no tracking | Yes |
+| Tavily | AI-optimized search, free tier available | Yes |
+| crawl4ai | AI-powered extraction, Python, free | Yes |
 
-# Use in Claude Code
-"valyu search Vietnam SaaS market"
-"deep search product-market fit"
-"academic search startup validation"
+```bash
+# Unified CLI
+python scripts/web_search.py valyu "Vietnam SaaS" --mode web
+python scripts/web_search.py firecrawl "https://example.com"
+python scripts/web_search.py brave "startup tools"
+python scripts/web_search.py tavily "market research" --search-depth advanced
+python scripts/web_search.py crawl4ai "https://example.com"
 ```
 
 | Mode | Use Case | Content |
@@ -95,13 +104,13 @@ T10: UX Design
 T9.5: Offer Bridge 💰        ← OFFER DESIGN
 T9: User Stories              ← PRODUCT
 T8: Feature Set
-T7: PMF Validation ⭐⭐⭐      ← STRATEGY (HARD GATE)
+T7: PMF Validation ⭐⭐⭐      ← STRATEGY (HARD GATE ≥30/50)
 ─────────────────────────────
 🔴 ANTI-BIAS LAYER           ← ENFORCEMENT
 AB1: Counter-Search
 AB2: Red Team
 AB3: Field Observation
-AB4: User Interview
+AB4: User Interview (PLACEHOLDER)
 AB5: Strategic Analysis ⭐
 AB6: Founder Insight 💰
 ─────────────────────────────
@@ -112,7 +121,10 @@ T3: Segment Filter            ← FOUNDATION
 T2: Market Segmentation
 T1: Target Market
 T0: Market Research 🔍        ← DATA
+T-1: Rapid Validation         ← RAPID VALIDATION
 ```
+
+**Current Status:** 18/19 tiers completed | PMF: 22/50 (NO-GO) | AB4 placeholder
 
 ---
 
@@ -122,10 +134,11 @@ T0: Market Research 🔍        ← DATA
 product-tower init              # Initialize project
 product-tower check T1          # Check gate
 product-tower complete T0       # Mark complete
-product-tower pmf 44 -4         # Set PMF score
+product-tower pmf 44 -4         # Set PMF score (raw + penalty)
 product-tower status            # Show status
 product-tower assess            # Quick health check
 product-tower naming            # Show naming convention
+product-tower version           # Show version
 ```
 
 ---

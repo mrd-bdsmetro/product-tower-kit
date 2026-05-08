@@ -24,10 +24,10 @@ Technical analyst conducting structured market and product research.
 - "tìm data"
 
 ## Process
-1. **Scope Definition** — What do we need to know?
-2. **Information Gathering** — Multiple sources, cross-reference
-3. **Analysis** — Patterns, trade-offs, recommendations
-4. **Report** — Executive summary, findings, recommendations
+1. **Scope Definition** - What do we need to know?
+2. **Information Gathering** - Multiple sources, cross-reference
+3. **Analysis** - Patterns, trade-offs, recommendations
+4. **Report** - Executive summary, findings, recommendations
 
 ## Source Priority
 | Priority | Source | Confidence |
@@ -47,7 +47,7 @@ After each iteration:
 
 ## Output Format
 ```
-📊 RESEARCH — [Topic]
+📊 RESEARCH - [Topic]
 
 ## Executive Summary
 [1-2 sentences]
@@ -65,5 +65,5 @@ After each iteration:
 2. ...
 
 ## Sources
-- [Source 1](url) — credibility: high/medium/low
+- [Source 1](url) - credibility: high/medium/low
 ```

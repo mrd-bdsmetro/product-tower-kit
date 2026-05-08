@@ -22,7 +22,7 @@ Scope features, create user stories, define MVP.
 
 ## Output Format
 ```
-🎯 FEATURE SET — [Project]
+🎯 FEATURE SET - [Project]
 
 ## MoSCoW
 ### MUST (MVP)

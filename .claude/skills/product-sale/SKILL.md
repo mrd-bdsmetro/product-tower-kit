@@ -10,7 +10,7 @@ triggers:
   - "unified framework"
 ---
 
-# Product x Sale — Unified Framework
+# Product x Sale - Unified Framework
 
 ## Goal
 Merge Product Tower (what to build) + Sales Tower (how to sell) into unified pipeline.

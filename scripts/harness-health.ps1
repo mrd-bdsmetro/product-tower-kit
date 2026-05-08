@@ -1,6 +1,6 @@
-<#
+﻿<#
 .SYNOPSIS
-    Product Tower Kit — Harness Health Check.
+    Product Tower Kit - Harness Health Check.
 .DESCRIPTION
     Checks required files, SKILL.md validity, agent definitions, commands, hooks, and package structure.
 #>
@@ -70,7 +70,7 @@ function Test-HasSection {
 
 Write-Host ""
 Write-Host "============================================================" -ForegroundColor Cyan
-Write-Host "  PRODUCT TOWER KIT — HARNESS HEALTH" -ForegroundColor Cyan
+Write-Host "  PRODUCT TOWER KIT - HARNESS HEALTH" -ForegroundColor Cyan
 Write-Host ("  " + (Get-Date -Format "yyyy-MM-dd HH:mm")) -ForegroundColor DarkGray
 Write-Host "============================================================" -ForegroundColor Cyan
 Write-Host ""
@@ -130,7 +130,7 @@ foreach ($skill in $expectedSkills) {
         $hasFrontmatter = Test-SkillFrontmatter $skillPath
         Add-Check "Skills" "$skill has YAML frontmatter" $hasFrontmatter "name + description"
 
-        $hasGoal = Test-HasSection $skillPath "# $skill" -or Test-HasSection $skillPath "## Goal"
+        $hasGoal = Test-HasSection $skillPath "## Goal" -or $content -match [regex]::Escape("# $skill")
         Add-Check "Skills" "$skill has Goal section" $hasGoal "skill header"
     }
 }
@@ -297,14 +297,15 @@ Write-Host ""
 $score = if ($totalChecks -gt 0) { [math]::Round(($passedChecks / $totalChecks) * 100) } else { 0 }
 $scoreColor = if ($issues.Count -eq 0) { "Green" } elseif ($score -ge 80) { "Yellow" } else { "Red" }
 
+$checkSummary = "$passedChecks/$totalChecks checks passed"
 Write-Host "============================================================" -ForegroundColor $scoreColor
-Write-Host ("  HEALTH SCORE: " + $score + "% (" + $passedChecks + "/" + $totalChecks + " checks passed)") -ForegroundColor $scoreColor
+Write-Host "  HEALTH SCORE: $score% ($checkSummary)" -ForegroundColor $scoreColor
 
 if ($issues.Count -gt 0) {
     Write-Host ""
     Write-Host "  ACTION ITEMS:" -ForegroundColor Yellow
     foreach ($issue in $issues) {
-        Write-Host ("    [" + $issue.Category + "] " + $issue.Label + " - " + $issue.Detail) -ForegroundColor White
+    Write-Host "    [$($issue.Category)] $($issue.Label) - $($issue.Detail)" -ForegroundColor White
     }
 }
 

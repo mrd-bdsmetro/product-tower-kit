@@ -10,7 +10,7 @@ triggers:
   - "deep research parser"
 ---
 
-# Deep Research Parser — Pre-T0
+# Deep Research Parser - Pre-T0
 
 ## Goal
 Parse Deep Research output (from Gemini/Grok/ChatGPT) into structured Product Tower files.

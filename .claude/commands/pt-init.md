@@ -1,4 +1,4 @@
-# /pt:init — Initialize Product Tower Project
+# /pt:init - Initialize Product Tower Project
 
 ## Usage
 ```
@@ -21,7 +21,7 @@
 └── pipeline_state.json     # Pipeline state
 
 🚀 Next steps:
-1. "research thị trường [ngành]" — Start T0
-2. "parse deep research [file]" — If you have Deep Research output
-3. "assess [project]" — Check current state
+1. "research thị trường [ngành]" - Start T0
+2. "parse deep research [file]" - If you have Deep Research output
+3. "assess [project]" - Check current state
 ```

@@ -10,7 +10,7 @@ triggers:
   - "bán thế nào"
 ---
 
-# Pricing Strategy — T9.5
+# Pricing Strategy - T9.5
 
 ## Goal
 Design offer bridge: pricing + guarantee + CTA. Bridge giữa "build gì" và "bán thế nào".
@@ -57,11 +57,11 @@ Source: AB4 user interview + AB6 founder insight
 ## OUTPUT
 
 ```markdown
-# T9.5: Offer Bridge — [Project]
+# T9.5: Offer Bridge - [Project]
 
 ## PRODUCT ROUTE (SaaS/App/Tool):
 - Pricing model: [model]
-- Price point: $X — DATA: from AB4/AB6
+- Price point: $X - DATA: from AB4/AB6
 - Guarantee: [type]
 - CTA: [main action]
 - Lead Magnet: [free tool/demo/trial]

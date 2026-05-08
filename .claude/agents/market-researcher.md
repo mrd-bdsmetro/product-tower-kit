@@ -22,7 +22,7 @@ Collect market data, validate sources, score confidence.
 
 ## Output Format
 ```
-📊 MARKET DATA — [Topic]
+📊 MARKET DATA - [Topic]
 
 | Data Point | Value | Source | Confidence |
 |-----------|-------|--------|------------|

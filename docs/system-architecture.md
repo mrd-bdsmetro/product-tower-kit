@@ -1,4 +1,4 @@
-# Product Tower Kit — System Architecture
+# Product Tower Kit - System Architecture
 
 ## High-Level Architecture
 
@@ -63,11 +63,11 @@
 
 ## 3-Language Stack
 
-### Python — Business Logic + Valyu Search
+### Python - Business Logic + Valyu Search
 
 **Files:**
-- `scripts/gate_checker.py` (247 lines) — Gate enforcement
-- `scripts/valyu_search.py` (159 lines) — Valyu API integration
+- `scripts/gate_checker.py` (277 lines) - Gate enforcement
+- `scripts/valyu_search.py` (159 lines) - Valyu API integration
 
 **Responsibilities:**
 - Gate enforcement (19-tier DAG)
@@ -100,11 +100,11 @@ cmd_assess()    # Health assessment
 cmd_naming()    # Show naming convention
 ```
 
-### PowerShell — Orchestration
+### PowerShell - Orchestration
 
 **Files:**
-- `scripts/harness-health.ps1` (259 lines) — Health check
-- `scripts/harness-eval.ps1` (103 lines) — Harness evaluator
+- `scripts/harness-health.ps1` (259 lines) - Health check
+- `scripts/harness-eval.ps1` (103 lines) - Harness evaluator
 
 **Responsibilities:**
 - Health checks (70+ checks across all components)
@@ -127,13 +127,13 @@ function Run-Check {
 }
 ```
 
-### Node.js — CLI Wrapper + CI Contracts
+### Node.js - CLI Wrapper + CI Contracts
 
 **Files:**
-- `bin/product-tower.js` (82 lines) — CLI entry point
-- `scripts/invariant-checks.js` (178 lines) — Invariant checks
-- `scripts/syntax-check.js` (78 lines) — Syntax validation
-- `index.js` (31 lines) — Module exports
+- `bin/product-tower.js` (82 lines) - CLI entry point
+- `scripts/invariant-checks.js` (178 lines) - Invariant checks
+- `scripts/syntax-check.js` (78 lines) - Syntax validation
+- `index.js` (31 lines) - Module exports
 
 **Responsibilities:**
 - CLI wrapper (maps commands to Python scripts)
@@ -165,7 +165,7 @@ function assert(condition, message) {
 
 ### 1. Skills System (Knowledge Layer)
 
-**17 SKILL.md files** in `.claude/skills/`
+**23 SKILL.md files** in `.claude/skills/`
 
 | Skill | Tiers | Purpose |
 |-------|-------|---------|
@@ -181,11 +181,17 @@ function assert(condition, message) {
 | delivery-tower | D1-D6 | GTM + launch |
 | sales-tower | S0-S9 | Hormozi framework |
 | product-sale | P0-P10 | Unified BUILD+SELL |
-| brainstorm | — | Trade-off analysis, anti-rationalization |
-| research | — | Systematic research with confidence scoring |
-| problem-solving | — | 5 Whys, 80/20, Inversion |
-| retro | — | Sprint retrospectives for T14 |
-| sequential-thinking | — | Structured problem-solving |
+| brainstorm | - | Trade-off analysis, anti-rationalization |
+| research | - | Systematic research with confidence scoring |
+| problem-solving | - | 5 Whys, 80/20, Inversion |
+| retro | - | Sprint retrospectives for T14 |
+| sequential-thinking | - | Structured problem-solving |
+| launch-strategy | - | ORB Framework, 5-phase launch |
+| marketing-ideas | - | 140+ proven marketing ideas |
+| marketing-psychology | - | 70+ mental models |
+| competitor-alternatives | - | Comparison page templates |
+| free-tool-strategy | - | Engineering-as-marketing |
+| onboarding-cro | - | User onboarding and activation |
 
 ### 2. Agents System (Execution Layer)
 
@@ -248,11 +254,12 @@ function assert(condition, message) {
 | harness-eval.ps1 | PowerShell | 103 | Harness evaluator |
 | harness-health.ps1 | PowerShell | 259 | Health check |
 | valyu_search.py | Python | 159 | Valyu API integration |
+| gate_checker.py | Python | 277 | Gate enforcement + PMF scoring |
 
 **3 Levels:**
-1. **Health** — File existence, structure, frontmatter
-2. **Eval** — Health + syntax + gate tests
-3. **Hardness** — Eval + Python syntax + gate integration
+1. **Health** - File existence, structure, frontmatter
+2. **Eval** - Health + syntax + gate tests
+3. **Hardness** - Eval + Python syntax + gate integration
 
 ---
 
@@ -274,7 +281,7 @@ T-1 → T0 → T1 → T2 → T3 → T4 → T5 → T6
 
 | Tier | Requires | Name |
 |------|----------|------|
-| T-1 | — | Rapid Validation |
+| T-1 | - | Rapid Validation |
 | T0 | T-1 | Market Research |
 | T1 | T0 | Target Market |
 | T2 | T0, T1 | Market Segmentation |
@@ -301,15 +308,20 @@ T-1 → T0 → T1 → T2 → T3 → T4 → T5 → T6
 PMF Adjusted = PMF Raw + Penalty
 
 Penalty Table:
-  Desk-only (no AB)     → -10
+  Desk-only (no AB)     → -11
   +AB1 only             → -5
   +AB1+AB2              → -2.5
-  Full AB (AB1-AB4)     → 0
+  +AB1+AB2+AB3          → 0
+  +AB1+AB2+AB3+AB4      → -5 (placeholder penalty)
   +AB5                  → +0.5
-  +AB6                  → +1.5
+  +AB6                  → +1.0
 
 Threshold: ≥30/50 = GO
 ```
+
+**Current Status:** 33/50 raw, 22/50 adjusted (NO-GO)
+- AB4 is PLACEHOLDER - real user interviews needed
+- Target: PMF 35/50 after 1-2 months validation
 
 ### Confidence Tagging
 
@@ -396,25 +408,25 @@ Next Tier or Block
 
 ### Claude Code
 
-- **Skills:** `.claude/skills/*/SKILL.md` — Knowledge files
-- **Agents:** `.claude/agents/*.md` — Agent definitions
-- **Commands:** `.claude/commands/pt-*.md` — Slash commands
-- **Hooks:** `.claude/hooks/*.sh` — Automation hooks
-- **Rules:** `.claude/rules/*.md` — Policy rules
-- **Settings:** `.claude/settings.json` — Hook configuration
+- **Skills:** `.claude/skills/*/SKILL.md` - Knowledge files
+- **Agents:** `.claude/agents/*.md` - Agent definitions
+- **Commands:** `.claude/commands/pt-*.md` - Slash commands
+- **Hooks:** `.claude/hooks/*.sh` - Automation hooks
+- **Rules:** `.claude/rules/*.md` - Policy rules
+- **Settings:** `.claude/settings.json` - Hook configuration
 
 ### npm
 
-- **Package:** `product-tower-kit` — npm package
-- **CLI:** `bin/product-tower.js` — CLI entry point
+- **Package:** `product-tower-kit` - npm package
+- **CLI:** `bin/product-tower.js` - CLI entry point
 - **Scripts:** `npm run test:syntax`, `npm run test:invariants`, etc.
 
 ### Python
 
-- **Gate Checker:** `scripts/gate_checker.py` — Gate enforcement
-- **Valyu Search:** `scripts/valyu_search.py` — Market research via Valyu API
+- **Gate Checker:** `scripts/gate_checker.py` - Gate enforcement
+- **Valyu Search:** `scripts/valyu_search.py` - Market research via Valyu API
 - **Called by:** Node.js CLI via `child_process.execSync()`
-- **State:** `pipeline_state.json` — Project state
+- **State:** `pipeline_state.json` - Project state
 
 ---
 

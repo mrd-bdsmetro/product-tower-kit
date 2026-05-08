@@ -66,7 +66,7 @@ check('bin/product-tower.js maps commands correctly', () => {
   const content = read('bin/product-tower.js');
   const requiredCommands = ['init', 'check', 'complete', 'pmf', 'status', 'assess', 'naming'];
   for (const cmd of requiredCommands) {
-    assert(content.includes(`'${cmd}'`) || content.includes(`"${cmd}"`), `missing command mapping: ${cmd}`);
+    assert(content.includes(`${cmd}:`) || content.includes(`'${cmd}'`) || content.includes(`"${cmd}"`), `missing command mapping: ${cmd}`);
   }
 });
 

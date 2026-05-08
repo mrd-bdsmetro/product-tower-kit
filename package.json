@@ -14,7 +14,8 @@
     "test:invariants": "node scripts/invariant-checks.js",
     "harness:health": "powershell -ExecutionPolicy Bypass -File scripts/harness-health.ps1",
     "harness:eval": "powershell -ExecutionPolicy Bypass -File scripts/harness-eval.ps1",
-    "harness:hardness": "powershell -ExecutionPolicy Bypass -File scripts/harness-eval.ps1 -IncludeGate -IncludePython"
+    "harness:hardness": "powershell -ExecutionPolicy Bypass -File scripts/harness-eval.ps1 -IncludeGate -IncludePython",
+    "search": "python scripts/web_search.py"
   },
   "files": [
     ".claude/",

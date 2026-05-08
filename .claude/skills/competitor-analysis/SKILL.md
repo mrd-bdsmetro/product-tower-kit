@@ -10,7 +10,7 @@ triggers:
   - "so sánh"
 ---
 
-# Competitor Analysis — T0-CP
+# Competitor Analysis - T0-CP
 
 ## Goal
 Map competitive landscape, find positioning opportunity.
@@ -19,10 +19,10 @@ Map competitive landscape, find positioning opportunity.
 
 ## STEPS
 
-1. **Identify** — List 5-10 competitors (direct + indirect)
-2. **Analyze** — Strengths, weaknesses, pricing, positioning
-3. **Map** — 2x2 positioning map
-4. **Moat** — Define your competitive moat
+1. **Identify** - List 5-10 competitors (direct + indirect)
+2. **Analyze** - Strengths, weaknesses, pricing, positioning
+3. **Map** - 2x2 positioning map
+4. **Moat** - Define your competitive moat
 
 ---
 
@@ -45,17 +45,17 @@ Value       |        Value
 
 ## PETER THIEL MOAT (4 characteristics)
 
-1. **Proprietary technology** — 10x better
-2. **Network effects** — More users = more value
-3. **Economies of scale** — Lower cost at scale
-4. **Branding** — Strong brand identity
+1. **Proprietary technology** - 10x better
+2. **Network effects** - More users = more value
+3. **Economies of scale** - Lower cost at scale
+4. **Branding** - Strong brand identity
 
 ---
 
 ## OUTPUT
 
 ```markdown
-# T0-CP: Competitive Positioning — [Project]
+# T0-CP: Competitive Positioning - [Project]
 
 ## Competitors
 | Name | Size | Strength | Weakness | Price | Positioning |

@@ -11,7 +11,7 @@ triggers:
   - "hormozi"
 ---
 
-# Sales Tower — S0-S9
+# Sales Tower - S0-S9
 
 ## Goal
 Design irresistible offers using Hormozi framework. For service businesses.

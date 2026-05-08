@@ -12,7 +12,7 @@ triggers:
   - "đánh giá sprint"
 ---
 
-# Retro — Sprint Retrospective
+# Retro - Sprint Retrospective
 
 ## Goal
 Generate data-driven retrospectives for product iteration.

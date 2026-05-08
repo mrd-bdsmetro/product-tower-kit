@@ -11,7 +11,7 @@ triggers:
   - "freebie"
 ---
 
-# Free Tool Strategy — Engineering as Marketing
+# Free Tool Strategy - Engineering as Marketing
 
 ## Goal
 Plan and build free tools that generate leads and users.
@@ -105,11 +105,11 @@ Week 3: Launch + promote
 
 ## Promotion Strategy
 
-1. **SEO** — Target "[tool type] tool" keywords
-2. **Social** — Share results, screenshots
-3. **Communities** — Reddit, HN, forums
-4. **Partnerships** — Embed in other products
-5. **PR** — "We built this free tool"
+1. **SEO** - Target "[tool type] tool" keywords
+2. **Social** - Share results, screenshots
+3. **Communities** - Reddit, HN, forums
+4. **Partnerships** - Embed in other products
+5. **PR** - "We built this free tool"
 
 ---
 

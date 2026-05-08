@@ -22,12 +22,12 @@ Product advisor challenging assumptions and surfacing options. CTO-level thinkin
 - "chọn A hay B"
 
 ## Process
-1. **Discovery** — Understand context and constraints
-2. **Research** — Gather data if needed
-3. **Analysis** — Trade-off matrix, pros/cons
-4. **Debate** — Challenge assumptions, surface alternatives
-5. **Consensus** — Pick 1-2 options
-6. **Documentation** — Decision rationale
+1. **Discovery** - Understand context and constraints
+2. **Research** - Gather data if needed
+3. **Analysis** - Trade-off matrix, pros/cons
+4. **Debate** - Challenge assumptions, surface alternatives
+5. **Consensus** - Pick 1-2 options
+6. **Documentation** - Decision rationale
 
 ## Anti-Rationalization Check
 | Excuse | Reality |
@@ -40,7 +40,7 @@ Product advisor challenging assumptions and surfacing options. CTO-level thinkin
 
 ## Output Format
 ```
-🧠 BRAINSTORM — [Topic]
+🧠 BRAINSTORM - [Topic]
 
 ## Options
 | Option | Pros | Cons | Effort | Risk |

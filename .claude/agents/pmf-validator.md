@@ -22,7 +22,7 @@ Score PMF signals, make GO/NO-GO decisions.
 
 ## Output Format
 ```
-⭐ PMF VALIDATION — [Project]
+⭐ PMF VALIDATION - [Project]
 
 ## 10 PMF Signals
 | # | Signal | Score | Evidence |

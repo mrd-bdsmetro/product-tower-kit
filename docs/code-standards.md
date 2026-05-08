@@ -1,4 +1,4 @@
-# Product Tower Kit — Code Standards
+# Product Tower Kit - Code Standards
 
 ## Directory Structure Convention
 
@@ -46,11 +46,8 @@ product-tower-kit/
 ```yaml
 ---
 name: skill-name
-version: 1.0.0
 description: One-line description of the skill
-triggers:
-  - "keyword1"
-  - "keyword2"
+location: file:///path/to/SKILL.md
 ---
 ```
 
@@ -72,7 +69,7 @@ One-paragraph description of what this skill does.
 3. Step 3
 
 ## Output Files
-- `data/t0_market_research.md` — Description
+- `data/t0_market_research.md` - Description
 
 ## References
 - [Link](url)
@@ -83,7 +80,7 @@ One-paragraph description of what this skill does.
 - Must start with `---` (YAML frontmatter delimiter)
 - Must contain `name:` field
 - Must contain `description:` field
-- Must have `## Goal` section
+- Must contain `location:` field
 - Must close frontmatter with `---`
 
 ---

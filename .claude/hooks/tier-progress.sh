@@ -1,5 +1,5 @@
 #!/bin/bash
-# tier-progress.sh — SessionStart hook
+# tier-progress.sh - SessionStart hook
 # Show current tier progress on session start
 
 PROJECT_DIR="$(pwd)"

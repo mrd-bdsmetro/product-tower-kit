@@ -48,7 +48,7 @@ def search_web(query, max_results=10):
     client = valyu.Valyu(api_key=api_key)
     
     print(f"🔍 Searching web: {query}")
-    results = client.search(query, max_results=max_results)
+    results = client.search(query, max_num_results=max_results)
     
     return {
         "mode": "web",
