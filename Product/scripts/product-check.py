@@ -152,11 +152,25 @@ def format_skill_link(skill_name):
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: product-check.py <product_dir>")
-        sys.exit(1)
+    # Determine product_dir
+    # If run via CLI (product-tower.js), it passes "." as arg from KIT_ROOT
+    # If run directly, use script location
+    if len(sys.argv) >= 2:
+        # CLI invocation - use the path passed
+        product_dir = Path(sys.argv[1])
+        # If path is "." or doesn't exist, use script location
+        if str(product_dir) == "." or not product_dir.exists():
+            product_dir = Path(__file__).parent.parent
+    else:
+        product_dir = Path(__file__).parent.parent
 
-    product_dir = sys.argv[1]
+    # Verify we're in a Product folder
+    if not (product_dir / "package.json").exists():
+        # Try parent
+        product_dir = product_dir.parent
+    if not (product_dir / "package.json").exists():
+        print(f"Error: Not in a Product folder. package.json not found.")
+        sys.exit(1)
 
     print("=" * 60)
     print("  PRODUCT CHECK - Product Tower Kit")

@@ -30,10 +30,11 @@ function getPython() {
 function runPython(script, args = []) {
   const python = getPython();
   const scriptPath = path.join(SCRIPTS_DIR, script);
+  const cwd = KIT_ROOT;
   try {
     execSync(`${python} "${scriptPath}" ${args.join(' ')}`, {
       stdio: 'inherit',
-      cwd: process.cwd()
+      cwd: cwd
     });
   } catch (e) {
     process.exit(e.status || 1);
