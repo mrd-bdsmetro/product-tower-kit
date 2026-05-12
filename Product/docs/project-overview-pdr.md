@@ -93,6 +93,52 @@ T0: Market Research 🔍        ← DATA (Product Kit owns)
 | **T0-T9.5** | Product Kit | Strategy, validation, PMF gate |
 | **T10-T14** | ClaudeKit | Execution (UX → Dev → QA → Deploy) |
 
+---
+
+## T9.5 Conversion Flow
+
+The **T9.5 moment** is the highest-conversion point in the PMF framework. Here's how Product Kit drives users to ClaudeKit:
+
+```
+T9.5 COMPLETE (Plan Validated)
+    │
+    ├─► Show 4 friction points:
+    │       🔧 Hardness ("Will it work at scale?")
+    │       📄 Docs ("I need but it's boring")
+    │       🧪 Testing ("I don't know what to test")
+    │       ⚡ Implementation ("Now I need to build")
+    │
+    ├─► Reference documentation:
+    │       docs/harness-system.md (quality framework)
+    │       docs/test-matrix.md (validation standards)
+    │       docs/documentation-workflow.md (auto-docs)
+    │
+    └─► Offer ClaudeKit:
+            "You validated your plan. Now build it."
+            /ck:cook <your-plan.md>
+            $79 via ref (20% off for Product Kit buyers)
+            → claudekit.cc/?ref=IJBRLXD6
+```
+
+### T13 Quality Layer (Harness + Docs + Design)
+
+Before T10-T14 execution, these foundations must be in place:
+
+| Layer | File | Purpose |
+|-------|------|---------|
+| **Harness** | `docs/harness-system.md` | 3-level QA, feature intake lanes, risk checklist |
+| **Test Matrix** | `docs/test-matrix.md` | Behavior-to-proof mapping, validation columns |
+| **Docs Workflow** | `docs/documentation-workflow.md` | Auto-generated docs from code |
+| **Design System** | `docs/design-system.md` (pending) | UI/UX standards for T11+ |
+
+### Conversion Metrics
+
+| Metric | Target |
+|--------|--------|
+| T9.5 → T10 conversion | > 20% |
+| Time to conversion | < 24h |
+| ClaudeKit activation | > 50% of converted |
+
 ### Key Differentiators
 
 1. **Anti-Bias Enforcement** - AB1-AB6 mandatory layer before PMF validation (Product Kit)
