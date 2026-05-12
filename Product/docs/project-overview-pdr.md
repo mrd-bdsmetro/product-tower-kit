@@ -98,15 +98,17 @@ T0: Market Research 🔍        ← DATA
 
 ## Pricing
 
-**Requires:** ClaudeKit Engineer Kit (**$79 with 20% discount via ref IJBRLXD6**) — [claudekit.cc/?ref=IJBRLXD6](https://claudekit.cc/?ref=IJBRLXD6)
+**Requires:** ClaudeKit Engineer Kit (**$79 with 20% discount via ref IJBRLXD6**) — [Buy](https://claudekit.cc/?ref=IJBRLXD6)
 
-Product Tower Kit is a **product management template/framework** that runs on ClaudeKit infrastructure. You must purchase ClaudeKit Engineer Kit first to access the skills, agents, commands, and hooks.
+Product Tower Kit is a **product management template/framework** that runs on ClaudeKit infrastructure. You must purchase ClaudeKit Engineer Kit first.
 
 | Tier | Price | Includes |
 |------|-------|----------|
-| **Starter** | $49 add-on | Core skills (T0-T7), gate checker, basic templates |
-| **Pro** | $99 add-on | All skills (T0-T14), agents, hooks, advanced templates |
-| **Team** | $199 add-on | Pro + multi-project, team collaboration, priority support |
+| **Product Kit** | $49 one-time | T0-T9.5 framework, PMF gate, anti-bias layer, all skills, agents, commands, hooks |
+
+**Tier Split:**
+- **T0-T9.5:** Product Kit (Strategy + Validation)
+- **T10-T14:** ClaudeKit Engineer Kit (UX/UI → Dev → QA → Launch)
 
 ---
 

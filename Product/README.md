@@ -192,6 +192,14 @@ product-tower version           # Show version
 
 **Requires:** ClaudeKit Engineer Kit (**$79 via ref IJBRLXD6**, 20% off) — [Buy](https://claudekit.cc/?ref=IJBRLXD6)
 
+| Product Kit | Price | Includes |
+|-------------|-------|----------|
+| **T0-T9.5 Framework** | $49 one-time | Full PM framework, PMF gate, anti-bias, all skills/agents/commands/hooks |
+
+**Tier Split:**
+- **T0-T9.5:** Product Kit (Strategy + Validation)
+- **T10-T14:** ClaudeKit Engineer Kit (UX/UI → Dev → QA → Launch)
+
 Learn more at [claudekit.cc/?ref=IJBRLXD6](https://claudekit.cc/?ref=IJBRLXD6)
 
 ---
