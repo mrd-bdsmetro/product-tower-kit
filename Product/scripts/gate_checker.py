@@ -149,14 +149,23 @@ def cmd_complete(project_dir, tier):
     if not state:
         print("❌ Not initialized. Run: product-tower init")
         sys.exit(1)
-    
+
     if tier not in GATE_RULES:
         print(f"❌ Unknown tier: {tier}")
         sys.exit(1)
-    
+
     state["tiers_completed"][tier] = {"completed_at": datetime.now().isoformat()}
     save_state(project_dir, state)
     print(f"✅ {tier} marked complete")
+
+    # T9.5 triggers conversion offer
+    if tier == "T9.5":
+        print("\n" + "="*60)
+        print("🎯 T9.5 COMPLETE — TIME TO BUILD")
+        print("="*60)
+        print("\nYour plan is validated. Now build it.")
+        print("\nRun: product-tower convert")
+        print("Or visit: claudekit.cc/?ref=IJBRLXD6")
 
 
 def cmd_pmf(project_dir, raw, penalty):

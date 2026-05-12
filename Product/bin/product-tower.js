@@ -41,6 +41,19 @@ function runPython(script, args = []) {
   }
 }
 
+function runNode(script, args = []) {
+  const scriptPath = path.join(SCRIPTS_DIR, script);
+  const cwd = KIT_ROOT;
+  try {
+    execSync(`node "${scriptPath}" ${args.join(' ')}`, {
+      stdio: 'inherit',
+      cwd: cwd
+    });
+  } catch (e) {
+    process.exit(e.status || 1);
+  }
+}
+
 function showHelp() {
   console.log(`
 Product Tower Kit v${require('../package.json').version}
@@ -57,6 +70,7 @@ Commands:
   assess                  Quick health check
   product-check           Full product status + skill suggestions
   naming                  Show file naming convention
+  convert                 Show T9.5 conversion prompt (ClaudeKit upsell)
   version                 Show version
 
 Examples:
@@ -87,12 +101,17 @@ const scriptMap = {
   status: 'gate_checker.py',
   assess: 'gate_checker.py',
   naming: 'gate_checker.py',
-  'product-check': 'product-check.py'
+  'product-check': 'product-check.py',
+  convert: 'convert.js'
 };
 
 if (scriptMap[command]) {
   const scriptArgs = args.slice(1);
-  runPython(scriptMap[command], [process.cwd(), command, ...scriptArgs]);
+  if (command === 'convert') {
+    runNode(scriptMap[command], scriptArgs);
+  } else {
+    runPython(scriptMap[command], [process.cwd(), command, ...scriptArgs]);
+  }
 } else {
   console.error(`Unknown command: ${command}`);
   showHelp();
