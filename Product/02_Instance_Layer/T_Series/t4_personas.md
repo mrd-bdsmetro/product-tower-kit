@@ -1,6 +1,22 @@
-# T4: User Personas - Product Tower Kit (UPDATED)
+# T4: User Personas - Product Tower Kit
 
-## Persona 1: Alex - Vibe Coder (PRIMARY)
+> **Video Nuance:** Target Customers ≠ Personas. Target Customers are who you SELL to. Personas are who USES the product. Sometimes these are different people (e.g., admin assistant books travel for executive but doesn't make the purchase decision).
+
+## Target Customers vs Personas Distinction
+
+| Concept | Definition | Example |
+|---------|------------|---------|
+| **Target Customer** | Who BUYS the product | Solo founder, startup CEO |
+| **User Persona** | Who USES the product | Developer, designer, admin |
+| **Influencer** | Affects decision but doesn't pay | Co-founder, mentor, investor |
+
+**Key Insight:** Interview ALL three types. An admin assistant using your product during the customer journey is NOT the target customer but MUST be considered.
+
+---
+
+## PRIMARY PERSONAS
+
+### Persona 1: Alex - Vibe Coder (Target Customer + User)
 
 **Behavior:** Uses Claude Code 4+ hours/day, builds multiple projects per month, ships fast but validates late
 **Purpose:** Wants to add product validation to his AI coding workflow
@@ -11,6 +27,8 @@
 | **Age** | 28 |
 | **Location** | San Francisco / Global |
 | **Role** | Indie developer, ships weekly |
+| **Is Target Customer?** | YES (pays for Pro tier) |
+| **Is Primary User?** | YES |
 | **Tools** | Claude Code, Cursor, GitHub, Vercel, Supabase |
 | **Budget** | $100-200 for premium dev tools |
 | **Pain** | No structured PM process. Relies on gut feeling. Builds first, validates never |
@@ -18,7 +36,7 @@
 | **Quote** | "I need a framework that works with my AI coding tools, not against them." |
 | **Frequency** | Daily user, multiple projects |
 
-## Persona 2: Sarah - Startup Founder (PRIMARY)
+## Persona 2: Sarah - Startup Founder (Target Customer + User)
 
 **Behavior:** Runs 2-person startup, validates ideas with landing pages, needs structured PM
 **Purpose:** Wants to validate ideas systematically before investing dev time
@@ -29,6 +47,8 @@
 | **Age** | 32 |
 | **Location** | London / Global |
 | **Role** | Co-founder, product lead |
+| **Is Target Customer?** | YES (pays for Team tier) |
+| **Is Primary User?** | YES (with co-founder) |
 | **Tools** | Claude Code, Notion, Figma, Stripe |
 | **Budget** | $100-200 for productivity tools |
 | **Pain** | No PM framework. Wasted 3 months building feature nobody used |
@@ -36,7 +56,9 @@
 | **Quote** | "We built for 3 months before talking to a single user. Never again." |
 | **Frequency** | Weekly user, 1-2 projects |
 
-## Persona 3: Minh - Vietnamese Solo Founder (SECONDARY)
+## SECONDARY PERSONAS
+
+### Persona 3: Minh - Vietnamese Solo Founder (Target Customer + User)
 
 **Behavior:** Builds 2-3 side projects per year, uses Claude Code daily, ships fast but validates late
 **Purpose:** Wants to ship products that users actually pay for
@@ -47,6 +69,8 @@
 | **Age** | 32 |
 | **Location** | Ho Chi Minh City |
 | **Role** | Full-time developer, part-time founder |
+| **Is Target Customer?** | YES (pays for Pro tier) |
+| **Is Primary User?** | YES |
 | **Tools** | Claude Code, Cursor, VS Code, Supabase |
 | **Budget** | $50-100 for tools that save time |
 | **Pain** | Builds first, validates never. Wasted 6 months on a product with 0 users |

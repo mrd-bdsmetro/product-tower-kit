@@ -32,7 +32,7 @@ NAMING_CONVENTION = {
     "T3": "data/t3_segment_filter.md",
     "T4": "data/t4_personas.md",
     "T5": "data/t5_user_needs.md",
-    "T6": "data/t6_unmet_needs.md",
+    "T6": "data/t6_underserved_needs.md",
     "AB1": "data/ab1_counter_search.md",
     "AB2": "data/ab2_red_team.md",
     "AB3": "data/ab3_field_notes.md",
