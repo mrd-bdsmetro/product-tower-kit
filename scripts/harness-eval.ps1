@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Product Tower Kit — Harness Evaluator.
+    Product Tower Kit - Harness Evaluator.
 .DESCRIPTION
     Runs deterministic checks and exits non-zero on failure.
 #>
@@ -60,7 +60,7 @@ function Run-Check {
 
 Write-Host ""
 Write-Host "============================================================" -ForegroundColor Cyan
-Write-Host "  PRODUCT TOWER KIT — HARNESS EVAL" -ForegroundColor Cyan
+Write-Host "  PRODUCT TOWER KIT - HARNESS EVAL" -ForegroundColor Cyan
 Write-Host ("  " + (Get-Date -Format "yyyy-MM-dd HH:mm")) -ForegroundColor DarkGray
 Write-Host "============================================================" -ForegroundColor Cyan
 Write-Host ""
