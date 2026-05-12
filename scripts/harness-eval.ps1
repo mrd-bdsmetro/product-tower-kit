@@ -55,7 +55,7 @@ function Run-Check {
     $color = if ($pass) { "Green" } else { "Red" }
     Write-Host ("  " + $status + " " + $Name + " (" + $elapsed + "s)") -ForegroundColor $color
 
-    return (New-Result $Name $pass $elapsed ([string]::Join("`n", $output)))
+    return (New-Result $Name $pass $elapsed ([string]::Join("`n", @($output))))
 }
 
 Write-Host ""

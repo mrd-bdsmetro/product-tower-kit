@@ -79,9 +79,10 @@ Write-Host ""
 Write-Host "  Package Files" -ForegroundColor White
 Write-Host "  ------------------------------" -ForegroundColor DarkGray
 
-foreach ($file in @("package.json", "index.js", "README.md", "LICENSE", "CHANGELOG.md", ".gitignore")) {
+foreach ($file in @("package.json", "index.js", "README.md", "LICENSE", ".gitignore")) {
     Add-Check "Package" $file (Test-RelativePath $file) "required"
 }
+Add-Check "Package" "CHANGELOG.md in 00_Entry_Point" (Test-RelativePath "00_Entry_Point\CHANGELOG.md") "required"
 
 $pkg = Read-Json "package.json"
 Add-Check "Package" "package.json parses" ($null -ne $pkg) "valid JSON"
@@ -248,14 +249,14 @@ Write-Host ""
 Write-Host "  Templates (templates/)" -ForegroundColor White
 Write-Host "  ------------------------------" -ForegroundColor DarkGray
 
-Add-Check "Templates" "product-plan.md exists" (Test-RelativePath "templates\product-plan.md") "plan template"
+Add-Check "Templates" "Product_Plan_Template.md exists" (Test-RelativePath "01_Framework_Layer\Product_Plan_Template.md") "plan template"
 
 # === RESOURCES ===
 Write-Host ""
 Write-Host "  Resources (resources/)" -ForegroundColor White
 Write-Host "  ------------------------------" -ForegroundColor DarkGray
 
-Add-Check "Resources" "ecosystem-map.md exists" (Test-RelativePath "resources\ecosystem-map.md") "routing map"
+Add-Check "Resources" "ecosystem-map.md in 01_Framework_Layer" (Test-RelativePath "01_Framework_Layer\ecosystem-map.md") "routing map"
 
 # === DOCS ===
 Write-Host ""
