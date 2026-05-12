@@ -4,14 +4,15 @@
 
 | Metric | Value |
 |--------|-------|
-| **Version** | 1.4.0 |
+| **Version** | 1.5.0 |
 | **PMF Score** | 22/50 adjusted (NO-GO) |
 | **Tiers Completed** | 18/19 |
-| **Skills** | 23 |
-| **Agents** | 7 |
-| **Commands** | 7 |
+| **Skills** | 23 (+ ClaudeKit Engineer Kit: 87 total available) |
+| **Agents** | 7 (+ ClaudeKit Engineer Kit: 14 total available) |
+| **Commands** | 7 (+ ClaudeKit Engineer Kit: 50+ total available) |
 | **Files** | 91 |
 | **Total LOC** | 6,278 |
+| **Requires** | ClaudeKit Engineer Kit (**$79 via ref IJBRLXD6**, 20% off) — [Buy](https://claudekit.cc/?ref=IJBRLXD6) |
 
 ### Current PMF Breakdown
 
@@ -38,17 +39,19 @@ Status:     ❌ NO-GO
 
 ## Version History
 
-### [1.4.0] - 2026-05-06
+### [1.4.0] - 2026-05-12
 
-**Added (Marketing Skills):**
-- `launch-strategy` - ORB Framework, 5-phase launch, Product Hunt strategy
-- `marketing-ideas` - 140+ proven marketing ideas (Content, PLG, Social, Email, Partnerships, PR)
-- `marketing-psychology` - 70+ mental models (persuasion, pricing, UX, growth)
-- `competitor-alternatives` - Comparison page templates for SEO and sales
-- `free-tool-strategy` - Engineering-as-marketing for lead generation
-- `onboarding-cro` - User onboarding and activation optimization
+**Added (ClaudeKit Integration):**
+- `06_Tools_Stack/ClaudeKit_API.md` - Full API documentation
+- VidCap API (YouTube): info, caption, summary, screenshot, comments, search
+- ReviewWeb API (Scraping + SEO): scrape, extract, markdown, backlinks, keywords, traffic
+- Rate limits: 10,000 requests/hour
 
-**Skills count:** 17 → 23
+**Changed:**
+- README, docs updated with ClaudeKit requirement notice
+- Pricing model clarification (requires ClaudeKit Engineer Kit purchase)
+
+**Skills count:** 23 (base) + ClaudeKit Engineer Kit access (87 skills, 14 agents, 50+ commands)
 
 ---
 
@@ -99,6 +102,8 @@ Status:     ❌ NO-GO
 
 ## Roadmap Phases
 
+**Note:** Product Tower Kit requires ClaudeKit Engineer Kit (**$79 via ref IJBRLXD6**, 20% off). The kit itself is a template/framework; revenue comes from add-on tiers + ClaudeKit license.
+
 ### Phase 1: Core Framework (COMPLETED)
 - [x] 19-tier DAG implementation
 - [x] Gate enforcement system
@@ -106,32 +111,32 @@ Status:     ❌ NO-GO
 - [x] PMF scoring (≥30/50 threshold)
 - [x] CLI commands (init/check/complete/pmf/status/assess/naming)
 
-### Phase 2: Claude Code Integration (COMPLETED)
-- [x] 23 skills (product-tower master + domain skills + process skills)
-- [x] 7 agents (planner, researcher, challenger, validator, scoper, brainstormer, researcher)
-- [x] 7 commands (pt-init, pt-research, pt-validate, pt-scope, pt-assess, pt-status, pt-report)
-- [x] 3 hooks (gate-check, pmf-alert, tier-progress)
-- [x] 3 rules (product-workflow, gate-enforcement, anti-bias)
+### Phase 2: ClaudeKit Integration (COMPLETED)
+- [x] 23 base skills + ClaudeKit Engineer Kit (87 skills, 14 agents, 50+ commands)
+- [x] ClaudeKit API docs (VidCap, ReviewWeb)
+- [x] Valyu search integration
+- [x] 7 base agents + ClaudeKit agents
+- [x] 7 base commands + ClaudeKit commands
 
 ### Phase 3: Launch Readiness (IN PROGRESS)
-- [ ] AB4: Real user interviews (remove placeholder)
-- [ ] Free tier launch (T0-T7 core)
 - [ ] Landing page with waitlist
-- [ ] GitHub repository setup
+- [ ] GitHub repository setup (AIScale-Corp/product-tower-kit)
 - [ ] npm package publication
+- [ ] AB4: Real user interviews (remove placeholder)
 - [ ] Product Hunt launch
 
 ### Phase 4: Validation (NEXT)
 - [ ] 5+ user interviews
-- [ ] 100+ free users
+- [ ] 100+ waitlist signups
 - [ ] Collect feedback
 - [ ] PMF reassessment
 
 ### Phase 5: Revenue (Q3 2026)
-- [ ] $49 Starter tier launch
-- [ ] $99 Pro tier launch
-- [ ] $199 Team tier launch
+- [ ] $49 Starter tier add-on launch
+- [ ] $99 Pro tier add-on launch
+- [ ] $199 Team tier add-on launch
 - [ ] Payment integration (SePay, Polar, Stripe)
+- [ ] ClaudeKit referral revenue
 
 ---
 
@@ -172,11 +177,13 @@ Status:     ❌ NO-GO
 
 | Dependency | Version | Required | Purpose |
 |------------|---------|----------|---------|
+| ClaudeKit Engineer Kit | Latest | **Yes** | Skills, agents, commands, hooks (private repo at claudekit.cc/?ref=IJBRLXD6) |
 | Node.js | ≥ 18.0.0 | Yes | CLI wrapper, syntax checks |
 | Python 3 | Any | Yes | Gate enforcement, PMF scoring, Valyu search |
 | PowerShell | Any | No | Harness health checks (Windows) |
-| Claude Code | Latest | Yes | Skills, agents, commands |
+| Claude Code | Latest | Yes | Skills, agents, commands execution |
 | Valyu | Latest | No | Enhanced market research |
+| ClaudeKit API | Latest | No | VidCap, ReviewWeb APIs |
 
 ---
 

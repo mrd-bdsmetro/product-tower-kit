@@ -4,6 +4,8 @@ Product management toolkit for vibe coders — validate ideas before you code.
 
 **For vibe coders, startup founders, freelancers, agencies.**
 
+**Requires:** ClaudeKit Engineer Kit ($99, **20% off with ref IJBRLXD6**) — [claudekit.cc/?ref=IJBRLXD6](https://claudekit.cc/?ref=IJBRLXD6) for full skills/agents access.
+
 ---
 
 ## What is Product Tower Kit?
@@ -24,6 +26,7 @@ A complete product management system for AI coding tools (Claude Code, Cursor, G
 - **14-Tier Framework** — From rapid validation to post-launch feedback
 - **Anti-Bias Enforcement** — AB1-AB6 mandatory layer before PMF validation
 - **PMF Gate System** — Code-enforced threshold (≥30/50) to proceed
+- **ClaudeKit Integration** — VidCap (YouTube) + ReviewWeb (scraping/SEO) APIs
 - **7 Specialized Agents** — Planner, researcher, challenger, validator, scoper, brainstormer, researcher
 - **23 Skills** — Complete PM toolkit with Claude Code integration + Valyu search
 - **7 Commands** — Slash commands for every workflow step
@@ -45,10 +48,38 @@ A complete product management system for AI coding tools (Claude Code, Cursor, G
 
 ---
 
+## ClaudeKit API Integration
+
+Product Tower Kit includes ClaudeKit API for enhanced research:
+
+**VidCap (YouTube Processing):**
+- Video metadata, captions, AI summaries
+- Screenshot capture at timestamps
+- Comment extraction
+- Content pipeline: video → summary → article → markdown
+
+**ReviewWeb (Scraping + SEO):**
+- Web scraping → clean markdown
+- AI summaries (URL, website, batch)
+- SEO analysis: backlinks, keywords, traffic
+- URL utilities: alive check, redirect resolution
+
+```powershell
+# Quick test
+Invoke-RestMethod -Uri "https://claudekit.cc/api/proxy/vidcap/v1/youtube/info?url=https://youtube.com/watch?v=dQw4w9WgXcQ" -Headers @{"X-API-Key"="ck_live_xxx"}
+```
+
+**Rate:** 10,000 requests/hour | **Docs:** `docs/claudekit-api.md`
+
+---
+
 ## Quick Start
 
 ```bash
-# Install
+# Requires ClaudeKit Engineer Kit ($99)
+# Purchase at claudekit.cc → GitHub repo access
+
+# Install CLI
 npm install -g product-tower-kit
 
 # Initialize in your project
@@ -159,11 +190,9 @@ product-tower version           # Show version
 
 ## Pricing
 
-| Tier | Price | Includes |
-|------|-------|----------|
-| **Starter** | $49 | Core skills (T0-T7), gate checker, basic templates |
-| **Pro** | $99 | All skills (T0-T14), agents, hooks, advanced templates |
-| **Team** | $199 | Pro + multi-project, team collaboration, priority support |
+**Requires:** ClaudeKit Engineer Kit (**$79 via ref IJBRLXD6**, 20% off) — [Buy](https://claudekit.cc/?ref=IJBRLXD6)
+
+Learn more at [claudekit.cc/?ref=IJBRLXD6](https://claudekit.cc/?ref=IJBRLXD6)
 
 ---
 

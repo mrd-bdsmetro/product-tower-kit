@@ -3,7 +3,7 @@ status: active
 type: tooling
 owner: MR.D
 last_updated: 2026-05-12
-tags: [tools, stack, obsidian, quartz, github, vercel]
+tags: [tools, stack, obsidian, quartz, github, vercel, claudiakit, api]
 pmf_impact: medium
 ---
 
@@ -244,4 +244,85 @@ const config: Configuration = {
 | **Syncthing** | Free | P2P, local network |
 
 ---
-*Tools Stack v2.0.0 — Obsidian + Quartz focused*
+
+## ClaudeKit API Integration
+
+### Overview
+
+ClaudeKit API là proxy layer cung cấp 2 dịch vụ chính: **VidCap** (YouTube processing) và **ReviewWeb** (web scraping + SEO).
+
+**Base URL:** `https://claudekit.cc`
+**Auth:** Header `X-API-Key: ck_live_xxx` hoặc `Authorization: Bearer ck_live_xxx`
+
+### VidCap - YouTube Processing
+
+| Endpoint | Chức năng |
+|----------|-----------|
+| `GET /youtube/info` | Metadata video (title, views, tags, description) |
+| `GET /youtube/media` | Định dạng media available |
+| `GET /youtube/download` | URL tải video |
+| `GET /youtube/caption?lang=vi` | Phụ đề đa ngôn ngữ |
+| `GET /youtube/summary` | Tóm tắt video AI |
+| `POST /youtube/summary-custom` | Tóm tắt custom prompt/model |
+| `GET /youtube/article` | Convert video → bài viết |
+| `GET /youtube/screenshot&timestamp=60` | Chụp 1 frame |
+| `GET /youtube/screenshot-multiple&count=5` | Chụp nhiều frame đều |
+| `GET /youtube/comments&limit=50` | Lấy comment |
+| `GET /youtube/search?q=...&limit=10` | Tìm kiếm video |
+
+**Ví dụ:**
+```bash
+# Lấy thông tin video
+curl -H "X-API-Key: ck_live_xxx" \
+  "https://claudekit.cc/api/proxy/vidcap/v1/youtube/info?url=https://youtube.com/watch?v=xxx"
+
+# Phụ đề tiếng Việt
+curl -H "X-API-Key: ck_live_xxx" \
+  "https://claudekit.cc/api/proxy/vidcap/v1/youtube/caption?url=https://youtube.com/watch?v=xxx&lang=vi"
+```
+
+### ReviewWeb - Web Scraping
+
+| Endpoint | Chức năng |
+|----------|-----------|
+| `POST /scrape` | Scrape HTML thô |
+| `POST /scrape/urls` | Scrape nhiều URL |
+| `POST /scrape/links-map` | Bản đồ liên kết (depth) |
+| `POST /extract` | Trích xuất nội dung chính |
+| `POST /extract/urls` | Trích xuất nhiều trang |
+| `POST /convert/markdown` | Web → Markdown |
+| `POST /convert/markdown/urls` | Nhiều trang → Markdown |
+| `POST /screenshot` | Chụp màn hình |
+| `POST /review` | Đánh giá website AI |
+
+### ReviewWeb - SEO Analysis
+
+| Endpoint | Chức năng |
+|----------|-----------|
+| `POST /summarize/url` | Tóm tắt URL bằng AI |
+| `POST /summarize/website` | Tóm tắt whole site (depth) |
+| `POST /summarize/urls` | Tóm tắt nhiều URL |
+| `POST /seo-insights/backlinks` | Phân tích backlink |
+| `POST /seo-insights/keyword-ideas` | Nghiên cứu từ khóa |
+| `POST /seo-insights/keyword-difficulty` | Điểm khó xếp hạng (0-100) |
+| `POST /seo-insights/traffic` | Ước tính traffic |
+| `POST /url/is-alive` | Check URL alive |
+| `POST /url/get-url-after-redirects` | Resolve redirect |
+
+### Use Cases
+
+| Use Case | API Endpoints |
+|----------|---------------|
+| **Content Pipeline** | VidCap info → summary → article → ReviewWeb markdown |
+| **Competitor Analysis** | ReviewWeb scrape → summarize → keyword-ideas |
+| **SEO Audit** | ReviewWeb backlinks + traffic + keyword-difficulty |
+| **YouTube Research** | VidCap search → info → caption → comments |
+| **Lead Generation** | ReviewWeb scrape links-map → extract → summarize |
+
+### Rate Limits
+
+- **10,000 requests/giờ** (rất generous)
+- Timeout: ~120s per request
+
+---
+*Tools Stack v2.1.0 — Added ClaudeKit API*

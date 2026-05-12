@@ -17,7 +17,9 @@
 
 ## Description
 
-Product Tower Kit is a product management toolkit for vibe coders and startup founders. It provides a 19-tier framework (T-1→T14) with anti-bias enforcement (AB1→AB6), a PMF gate system (≥30/50), 7 specialized agents, **23 skills**, 7 commands, and 3 hooks. Includes Valyu search integration for enhanced market research.
+Product Tower Kit is a product management toolkit for vibe coders and startup founders. Built on **ClaudeKit Engineer Kit** infrastructure (87 skills, 14 agents, 50+ commands). Provides a 19-tier framework (T-1→T14) with anti-bias enforcement (AB1→AB6), a PMF gate system (≥30/50), plus Valyu search and ClaudeKit APIs (VidCap, ReviewWeb) for enhanced research.
+
+**Requires:** ClaudeKit Engineer Kit ($99) — [claudekit.cc/?ref=IJBRLXD6](https://claudekit.cc/?ref=IJBRLXD6)
 
 **Current Status:** 18/19 tiers completed | PMF: 33/50 raw → 22/50 adjusted (NO-GO) | AB4 placeholder (confidence 70%)
 
@@ -96,11 +98,15 @@ T0: Market Research 🔍        ← DATA
 
 ## Pricing
 
+**Requires:** ClaudeKit Engineer Kit (**$79 with 20% discount via ref IJBRLXD6**) — [claudekit.cc/?ref=IJBRLXD6](https://claudekit.cc/?ref=IJBRLXD6)
+
+Product Tower Kit is a **product management template/framework** that runs on ClaudeKit infrastructure. You must purchase ClaudeKit Engineer Kit first to access the skills, agents, commands, and hooks.
+
 | Tier | Price | Includes |
 |------|-------|----------|
-| **Starter** | $49 | Core skills (T0-T7), gate checker, basic templates |
-| **Pro** | $99 | All skills (T0-T14), agents, hooks, advanced templates |
-| **Team** | $199 | Pro + multi-project, team collaboration, priority support |
+| **Starter** | $49 add-on | Core skills (T0-T7), gate checker, basic templates |
+| **Pro** | $99 add-on | All skills (T0-T14), agents, hooks, advanced templates |
+| **Team** | $199 add-on | Pro + multi-project, team collaboration, priority support |
 
 ---
 
@@ -148,10 +154,11 @@ T0: Market Research 🔍        ← DATA
 | Constraint | Detail |
 |------------|--------|
 | **Runtime** | Node.js ≥ 18.0.0 |
-| **Dependencies** | Zero npm dependencies |
+| **Dependencies** | Zero npm dependencies (uses ClaudeKit skills/agents/commands) |
 | **Python** | Required for gate_checker.py, valyu_search.py |
 | **Platform** | Cross-platform (Windows, macOS, Linux) |
-| **Claude Code** | Required for skills, agents, commands |
+| **ClaudeKit Engineer Kit** | **$79 (20% off via IJBRLXD6)** | Required — [Buy](https://claudekit.cc/?ref=IJBRLXD6) |
+| **Claude Code** | Required for skills, agents, commands execution |
 
 ---
 
@@ -161,9 +168,11 @@ T0: Market Research 🔍        ← DATA
 |------------|------|---------|
 | Node.js | Runtime | CLI wrapper, syntax checks |
 | Python 3 | Runtime | Gate enforcement, PMF scoring, Valyu search |
-| PowerShell | Runtime | Harness health checks (optional) |
-| Claude Code | Platform | Skills, agents, commands execution |
+| PowerShell | Runtime | Harness health checks (optional, Windows) |
+| ClaudeKit Engineer Kit | Platform | Skills, agents, commands, hooks (private GitHub repo) |
+| Claude Code | Platform | Execution environment for Product Tower |
 | Valyu | Optional | Enhanced market research (web, deep, academic) |
+| ClaudeKit API | Optional | VidCap (YouTube), ReviewWeb (scraping/SEO) |
 
 ---
 

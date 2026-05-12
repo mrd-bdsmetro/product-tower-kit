@@ -163,9 +163,11 @@ function assert(condition, message) {
 
 ## 6 Systems
 
+**Note:** Product Tower Kit base provides 23 skills, 7 agents, 7 commands. Full ClaudeKit Engineer Kit adds 87 skills, 14 agents, 50+ commands, 20+ hooks.
+
 ### 1. Skills System (Knowledge Layer)
 
-**23 SKILL.md files** in `.claude/skills/`
+**Base: 23 SKILL.md files** + ClaudeKit Engineer Kit (87 skills)
 
 | Skill | Tiers | Purpose |
 |-------|-------|---------|
@@ -193,9 +195,11 @@ function assert(condition, message) {
 | free-tool-strategy | - | Engineering-as-marketing |
 | onboarding-cro | - | User onboarding and activation |
 
+**ClaudeKit Engineer Kit skills:** ck:plan, ck:cook, ck:scout, ck:debug, ck:fix, ck:ship, ck:deploy, ck:git, ck:docs, research, and 77 more.
+
 ### 2. Agents System (Execution Layer)
 
-**7 agents** in `.claude/agents/`
+**Base: 7 agents** + ClaudeKit Engineer Kit (14 agents)
 
 | Agent | Role | Trigger |
 |-------|------|---------|
@@ -408,12 +412,16 @@ Next Tier or Block
 
 ### Claude Code
 
-- **Skills:** `.claude/skills/*/SKILL.md` - Knowledge files
-- **Agents:** `.claude/agents/*.md` - Agent definitions
-- **Commands:** `.claude/commands/pt-*.md` - Slash commands
-- **Hooks:** `.claude/hooks/*.sh` - Automation hooks
-- **Rules:** `.claude/rules/*.md` - Policy rules
-- **Settings:** `.claude/settings.json` - Hook configuration
+**Requires:** ClaudeKit Engineer Kit (**$79 via ref IJBRLXD6**, 20% off at [claudekit.cc/?ref=IJBRLXD6](https://claudekit.cc/?ref=IJBRLXD6)) — provides private GitHub repo access
+
+| Component | Source | Location |
+|-----------|--------|----------|
+| Skills | Base (23) + ClaudeKit Engineer Kit (87) | `.claude/skills/*/SKILL.md` |
+| Agents | Base (7) + ClaudeKit Engineer Kit (14) | `.claude/agents/*.md` |
+| Commands | Base (7) + ClaudeKit Engineer Kit (50+) | `.claude/commands/*.md` |
+| Hooks | ClaudeKit Engineer Kit (20+) | `.claude/hooks/*.sh` |
+| Rules | ClaudeKit Engineer Kit | `.claude/rules/*.md` |
+| Settings | ClaudeKit Engineer Kit | `.claude/settings.json` |
 
 ### npm
 
@@ -427,6 +435,41 @@ Next Tier or Block
 - **Valyu Search:** `scripts/valyu_search.py` - Market research via Valyu API
 - **Called by:** Node.js CLI via `child_process.execSync()`
 - **State:** `pipeline_state.json` - Project state
+
+---
+
+## ClaudeKit API Layer
+
+### Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    CLAUDEKIT API INTEGRATION                      │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  VidCap (YouTube Processing)                                    │
+│  ├── /youtube/info          → Metadata, tags, description        │
+│  ├── /youtube/caption       → Phụ đề đa ngôn ngữ                │
+│  ├── /youtube/summary       → Tóm tắt AI                        │
+│  ├── /youtube/screenshot    → Frame capture                     │
+│  ├── /youtube/comments      → Comment extraction                │
+│  └── /youtube/search        → Video search                       │
+│                                                                  │
+│  ReviewWeb (Scraping + SEO)                                      │
+│  ├── /scrape, /extract      → Web content extraction            │
+│  ├── /convert/markdown      → Web → Markdown                     │
+│  ├── /screenshot            → Page screenshots                  │
+│  ├── /summarize/*          → AI summaries                        │
+│  └── /seo-insights/*       → Backlinks, keywords, traffic       │
+│                                                                  │
+│  Base: https://claudekit.cc/api/proxy/                           │
+│  Auth: X-API-Key header                                         │
+│  Limits: 10,000 req/hour                                         │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**See:** `06_Tools_Stack/Tools_Stack.md` (ClaudeKit API section)
 
 ---
 
