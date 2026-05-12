@@ -84,6 +84,7 @@ foreach ($file in @("package.json", "index.js", "README.md", "LICENSE", ".gitign
 }
 Add-Check "Package" "CHANGELOG.md in 00_Entry_Point" (Test-RelativePath "00_Entry_Point\CHANGELOG.md") "required"
 
+# Package.json and index.js are at root of Product folder
 $pkg = Read-Json "package.json"
 Add-Check "Package" "package.json parses" ($null -ne $pkg) "valid JSON"
 
