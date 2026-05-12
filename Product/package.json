@@ -10,6 +10,7 @@
     "test": "echo \"No tests yet\"",
     "lint": "echo \"No linter\"",
     "init": "node bin/product-tower.js init",
+    "check": "node bin/product-tower.js product-check",
     "test:syntax": "node scripts/syntax-check.js",
     "test:invariants": "node scripts/invariant-checks.js",
     "harness:health": "powershell -ExecutionPolicy Bypass -File scripts/harness-health.ps1",

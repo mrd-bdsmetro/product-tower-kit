@@ -54,6 +54,7 @@ Commands:
   pmf <raw> <penalty>     Set PMF score with penalty
   status                  Show pipeline status
   assess                  Quick health check
+  product-check           Full product status + skill suggestions
   naming                  Show file naming convention
   version                 Show version
 
@@ -63,7 +64,7 @@ Examples:
   product-tower complete T0
   product-tower pmf 44 -4
   product-tower status
-  product-tower assess
+  product-tower product-check
 `);
 }
 
@@ -84,7 +85,8 @@ const scriptMap = {
   pmf: 'gate_checker.py',
   status: 'gate_checker.py',
   assess: 'gate_checker.py',
-  naming: 'gate_checker.py'
+  naming: 'gate_checker.py',
+  'product-check': 'product-check.py'
 };
 
 if (scriptMap[command]) {
