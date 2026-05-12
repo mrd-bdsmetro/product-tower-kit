@@ -87,11 +87,10 @@ Product Kit Tower maps the Product Management Tower framework to the Product Tow
 ├─────────────────────────────────────────────────────────────────┤
 │  LAYER 1: TOOLS STACK             ← Technical Feasibility       │
 │  ─────────────────────────────────────────────────────────────  │
-│  - Notion (Execution)                                          │
-│  - Obsidian (Framework)                                        │
-│  - GitHub (Version control)                                    │
-│  - Vercel (Publish)                                            │
-│  Files: 06_Tools_Stack/*                                      │
+│  - Obsidian (Framework + Instance)                              │
+│  - GitHub (Version control)                                     │
+│  - Quartz (Publish to static site)                              │
+│  Files: 06_Tools_Stack/*                                       │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -110,9 +109,9 @@ Product Kit Tower maps the Product Management Tower framework to the Product Tow
 | 4: Entry Point | `00_Entry_Point/{INDEX,Quick_Start,Executive_Summary,CHANGELOG}.md` | 4 |
 | 3: Validation Funnel | `Validation_Funnel.md` | 1 |
 | 2: Design System | `.claude/skills/*/SKILL.md` | 21 |
-| 1: Tools Stack | `06_Tools_Stack/*.md` | 3 |
+| 1: Tools Stack | `06_Tools_Stack/*.md` | 5 |
 
-**Total: 65+ files across 12 layers**
+**Total: 67+ files across 12 layers**
 
 ## PMF Score Calculation
 
