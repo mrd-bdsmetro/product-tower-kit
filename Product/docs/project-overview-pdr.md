@@ -59,40 +59,48 @@ Product Tower Kit is a product management toolkit for vibe coders and startup fo
 
 ```
 T14: Feedback Loop 🔄        ← MEASURE & ITERATE
-T13: QA / Validation         ← BUILD
-T12: Development
-T11: UI Design               ← DESIGN
-T10: UX Design
-T9.5: Offer Bridge 💰        ← OFFER DESIGN
-T9: User Stories              ← PRODUCT
+T13: QA / Validation           ← BUILD (ClaudeKit executes)
+T12: Development               ← ClaudeKit executes
+T11: UI Design                ← ClaudeKit executes
+T10: UX Design                ← ClaudeKit executes (with Product Kit strategy)
+────────────────────────────
+T9.5: Offer Bridge 💰        ← OFFER DESIGN (Product Kit owns)
+T9: User Stories              ← PRODUCT (Product Kit owns)
 T8: Feature Set
-T7: PMF Validation ⭐⭐⭐      ← STRATEGY (HARD GATE)
-─────────────────────────────
-🔴 ANTI-BIAS LAYER           ← ENFORCEMENT
+T7: PMF Validation ⭐⭐⭐      ← STRATEGY (HARD GATE - Product Kit owns)
+────────────────────────────
+🔴 ANTI-BIAS LAYER           ← ENFORCEMENT (Product Kit owns)
 AB1: Counter-Search
 AB2: Red Team
 AB3: Field Observation
 AB4: User Interview
 AB5: Strategic Analysis ⭐
 AB6: Founder Insight 💰
-─────────────────────────────
-T6: Unmet Needs ⭐            ← DISCOVERY
+────────────────────────────
+T6: Unmet Needs ⭐            ← DISCOVERY (Product Kit owns)
 T5: User Needs
 T4: User Personas
-T3: Segment Filter            ← FOUNDATION
+T3: Segment Filter            ← FOUNDATION (Product Kit owns)
 T2: Market Segmentation
 T1: Target Market
-T0: Market Research 🔍        ← DATA
+T0: Market Research 🔍        ← DATA (Product Kit owns)
 ```
+
+### Tier Split: Product Kit vs ClaudeKit
+
+| Tiers | Owner | Role |
+|-------|-------|------|
+| **T0-T9.5** | Product Kit | Strategy, validation, PMF gate |
+| **T10-T14** | ClaudeKit | Execution (UX → Dev → QA → Deploy) |
 
 ### Key Differentiators
 
-1. **Anti-Bias Enforcement** - AB1-AB6 mandatory layer before PMF validation
-2. **Code-Enforced Gates** - PMF ≥ 30/50 required to proceed
-3. **Confidence Tagging** - Every data point scored (60%-95%)
-4. **ADHD-Friendly** - One tier at a time, clear next actions
-5. **Multi-Platform** - Works with Claude Code, Cursor, and other AI tools
-6. **Reusable** - Use for every project you build
+1. **Anti-Bias Enforcement** - AB1-AB6 mandatory layer before PMF validation (Product Kit)
+2. **Code-Enforced Gates** - PMF ≥ 30/50 required to proceed (Product Kit)
+3. **ClaudeKit Upsell** - T10-T14 hardness + docs trigger ClaudeKit purchase
+4. **Confidence Tagging** - Every data point scored (60%-95%)
+5. **ADHD-Friendly** - One tier at a time, clear next actions
+6. **Multi-Platform** - Works with Claude Code, Cursor, and other AI tools
 
 ---
 

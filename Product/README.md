@@ -4,7 +4,7 @@ Product management toolkit for vibe coders — validate ideas before you code.
 
 **For vibe coders, startup founders, freelancers, agencies.**
 
-**Requires:** ClaudeKit Engineer Kit ($99, **20% off with ref IJBRLXD6**) — [claudekit.cc/?ref=IJBRLXD6](https://claudekit.cc/?ref=IJBRLXD6) for full skills/agents access.
+**Requires:** ClaudeKit Engineer Kit (**$79 with 20% off via ref IJBRLXD6**) — [claudekit.cc/?ref=IJBRLXD6](https://claudekit.cc/?ref=IJBRLXD6)
 
 ---
 
@@ -48,7 +48,19 @@ A complete product management system for AI coding tools (Claude Code, Cursor, G
 
 ---
 
-## ClaudeKit API Integration
+## ClaudeKit Upsell Trigger
+
+When you complete T9.5 (Offer Bridge), Product Kit recommends:
+
+> **"Your plan is validated! Ready to build?"**
+> - T10-T14 needs hardness testing + documentation
+> - **ClaudeKit Engineer Kit** ($79 via ref IJBRLXD6) handles this
+> - Or continue solo with basic implementation
+
+```bash
+# When T9.5 complete → this prompt appears:
+"Use ClaudeKit to execute T10-T14: /ck:cook <plan-file>"
+```
 
 Product Tower Kit includes ClaudeKit API for enhanced research:
 
@@ -127,35 +139,38 @@ python scripts/web_search.py crawl4ai "https://example.com"
 ## The Tower
 
 ```
-T14: Feedback Loop 🔄        ← MEASURE & ITERATE
-T13: QA / Validation         ← BUILD
-T12: Development
-T11: UI Design               ← DESIGN
-T10: UX Design
-T9.5: Offer Bridge 💰        ← OFFER DESIGN
-T9: User Stories              ← PRODUCT
+T14: Feedback Loop 🔄        ← MEASURE & ITERATE (ClaudeKit)
+T13: QA / Validation         ← BUILD (ClaudeKit executes)
+T12: Development            ← ClaudeKit executes
+T11: UI Design               ← ClaudeKit executes
+T10: UX Design               ← ClaudeKit (with Product Kit strategy)
+────────────────────────────
+T9.5: Offer Bridge 💰        ← OFFER DESIGN (Product Kit owns)
+T9: User Stories              ← PRODUCT (Product Kit owns)
 T8: Feature Set
 T7: PMF Validation ⭐⭐⭐      ← STRATEGY (HARD GATE ≥30/50)
-─────────────────────────────
-🔴 ANTI-BIAS LAYER           ← ENFORCEMENT
+────────────────────────────
+🔴 ANTI-BIAS LAYER           ← ENFORCEMENT (Product Kit owns)
 AB1: Counter-Search
 AB2: Red Team
 AB3: Field Observation
 AB4: User Interview (PLACEHOLDER)
 AB5: Strategic Analysis ⭐
 AB6: Founder Insight 💰
-─────────────────────────────
-T6: Unmet Needs ⭐            ← DISCOVERY
+────────────────────────────
+T6: Unmet Needs ⭐            ← DISCOVERY (Product Kit owns)
 T5: User Needs
 T4: User Personas
-T3: Segment Filter            ← FOUNDATION
+T3: Segment Filter            ← FOUNDATION (Product Kit owns)
 T2: Market Segmentation
 T1: Target Market
-T0: Market Research 🔍        ← DATA
+T0: Market Research 🔍        ← DATA (Product Kit owns)
 T-1: Rapid Validation         ← RAPID VALIDATION
 ```
 
-**Current Status:** 18/19 tiers completed | PMF: 22/50 (NO-GO) | AB4 placeholder
+**Tier Split:**
+- **T0-T9.5:** Product Kit (Strategy + Validation)
+- **T10-T14:** ClaudeKit Engineer Kit (Execution)
 
 ---
 
